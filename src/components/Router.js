@@ -4,8 +4,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import './../assets/css/layout.css'
+import './../assets/css/style.css'
 
-class Container extends Component {
+class Router extends Component {
     state = {
         currentPage: "Home"
       };
@@ -39,4 +41,4 @@ class Container extends Component {
   }
 }
 
-export default Container;
+export default Router;

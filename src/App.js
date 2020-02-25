@@ -1,6 +1,8 @@
 import React from "react";
-import Container from "./components/Container";
+import Router from "./components/Router";
+import "./App.css";
 
-const App = () => <Container />;
+
+const App = () => <Router />;
 
 export default App;

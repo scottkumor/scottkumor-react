@@ -1,46 +1,70 @@
 import React from 'react'
 
 function Nav(props) {
-
+ 
         return (
-            <ul id="nav" className="d-f jc-c ai-c fz-jj mt-l">
-                <li className="b-n bg-c-b-fc bg-c-db-hv bg-c-n c-db c-db-fc c-w-hv mr-s p-s td-n s-hv t-g-hv t-s-fc">
+            <nav id="nav" className="d-f jc-c ai-c fz-jj ps-f tps-st mt-l ml-m">
+                <div className="m-m">
                     <a
                     href="#home"
+                    className="aa b-n p-s td-n s-hv t-g-hv   
+                    
+                    c-fw bg-c-n 
+                    c-dg-hv bg-c-fw-hv 
+                    c-w-fc bg-c-fw-fc
+                    
+                    "
                     onClick={() => props.handlePageChange("Home")}
-                    className={props.currentPage === "Home" ? "nav-link active" : "nav-link"}
                     >
                     Home
                     </a>
-                </li>
-                <li className="b-n bg-c-b-fc bg-c-db-hv bg-c-n c-db c-db-fc c-w-hv mr-s p-s td-n s-hv t-g-hv t-s-fc">
+                </div>
+                <div className="m-m">
                     <a
                     href="#about"
+                    className="aa b-n p-s td-n s-hv t-g-hv   
+                    
+                    c-fw bg-c-n 
+                    c-dg-hv bg-c-fw-hv 
+                    c-w-fc bg-c-fw-fc
+                    
+                    "
                     onClick={() => props.handlePageChange("About")}
-                    className={props.currentPage === "About" ? "nav-link active" : "nav-link"}
                     >
                     About
                     </a>
-                </li>
-                <li className="b-n bg-c-b-fc bg-c-db-hv bg-c-n c-db c-db-fc c-w-hv mr-s p-s td-n s-hv t-g-hv t-s-fc">
+                </div>
+                <div className="m-m">
                     <a
                     href="#portfolio"
+                    className="aa b-n p-s td-n s-hv t-g-hv   
+                    
+                    c-fw bg-c-n 
+                    c-dg-hv bg-c-fw-hv 
+                    c-w-fc bg-c-fw-fc
+                    
+                    "
                     onClick={() => props.handlePageChange("Portfolio")}
-                    className={props.currentPage === "Portfolio" ? "nav-link active" : "nav-link"}
                     >
                     Portfolio
                     </a>
-                </li>
-                <li className="b-n bg-c-b-fc bg-c-db-hv bg-c-n c-db c-db-fc c-w-hv mr-s p-s td-n s-hv t-g-hv t-s-fc">
+                </div>
+                <div className="m-m">
                     <a
                     href="#contact"
+                    className="aa b-n p-s td-n s-hv t-g-hv   
+                    
+                    c-fw bg-c-n 
+                    c-dg-hv bg-c-fw-hv 
+                    c-w-fc bg-c-fw-fc
+                    
+                    "
                     onClick={() => props.handlePageChange("Contact")}
-                    className={props.currentPage === "Contact" ? "nav-link active" : "nav-link"}
                     >
                     Contact
                     </a>
-                </li>
-            </ul>
+                </div>
+            </nav>
         )
     }
 
