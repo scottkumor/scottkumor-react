@@ -1,6 +1,4 @@
-.aa {
-  padding: -10%;
-}
+
 
 .ac-sa {align-content:space-around;}
 .ac-s {align-content:stretch;}
@@ -114,14 +112,16 @@
 
 .h-f {height: 100%;}
 .h-fv {height: 100vh;}
-.h-h {height: 50%;}
-.h-m {height: 10%;}
-.h-30v {height: 30vh;}
+.h-50 {height: 50%;}
+.h-10vh {height: 10vh;}
 
 .w-fv {width: 100vw;}
-.w-50 {width: 50vw;}
-.w-75 {width: 75vw;}
+.w-25 {width: 25%;}
 
+.w-50 {width: 50vw;}
+.w-60vw {width: 60vw;}
+.w-75vw {width: 75vw;}
+.w-100vw {width: 100vw;}
   /* margin: large, medium, small */
   .m-l {margin: 5%;}
   .m-m {margin: 3%;}
@@ -132,6 +132,11 @@
   .mt-m {margin-top: 3%;}
   .mt-l {margin-top: 5%;}
   .mt-xxl {margin-top: 10%;}
+  .mt-j {margin-top: 30%;}
+
+  .mb-m { margin-bottom: 3%;}
+  .mb-l { margin-bottom: 5%;}
+
   
   .ml-0 {margin-left: 0;}
   .ml-s {margin-left: 5%;}
@@ -140,6 +145,7 @@
 
   .mr-0 {margin-right: 0;}
   .mr-s {margin-right: 5%;}
+  .mr-m {margin-right: 10%;}
   .mr-l {margin-right: 25%;}
 
 
@@ -176,8 +182,10 @@
   .p-s {padding: 1%;}
 
   /* padding-right: small */
-  .pr-s {padding-right: 4%;}
+  .pr-m {padding-right: 10%;}
+  .pl-m {padding-left: 10%;}
 
+  .lh-s{line-height: 1.5;}
 
   /* position: absolute, fixed, relative */
   .ps-a {position: absolute;}
@@ -197,141 +205,5 @@
   .t-i {text-indent: 5%;}
   .ta-j {text-align: justify;}
 
-    
-
   /* white-space: no wrap; */
   .ws-nw {white-space: nowrap;}
-
-  
-
-
-  /* contact page grid */
-  .d-g-c {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-    grid-template-rows: auto;
-    gap: 3%;
-    height: 100%;
-    width: 100%;
-  }
-
-  .gbx-c-0 {
-    grid-area: gbx-c-0;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-c-1 {
-    grid-area: gbx-c-1;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-c-2 {
-    grid-area: gbx-c-2;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-
-
-
-/* ------------------GRID CSS------------------ */
-  /* about me page grid */
-  .d-g-a {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-    grid-template-rows: auto;
-    gap: 3%;
-    height: 100%;
-    width: 100%;
-  }
-
-  .gbx-a-0 {
-    grid-area: gbx-a-0;
-    grid-column: 1/2;
-    grid-row: auto;
-  }
-  .gbx-a-1 {
-    grid-area: gbx-a-1;
-    grid-column: 2/2;
-    grid-row: auto;
-  }
-  .gbx-a-2 {
-    grid-area: gbx-a-2;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-a-3 {
-    grid-area: gbx-a-3;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-a-4 {
-    grid-area: gbx-a-4;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-
-  /* contact page grid */
-  .d-g-c {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-    grid-template-rows: auto;
-    gap: 3%;
-    height: 100%;
-    width: 100%;
-  }
-
-  .gbx-c-0 {
-    grid-area: gbx-c-0;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-c-1 {
-    grid-area: gbx-c-1;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-  .gbx-c-2 {
-    grid-area: gbx-c-2;
-    grid-column: 1 / span 2;
-    grid-row: auto;
-  }
-
-  /* portfolio page grid */
-  .d-g-p {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: auto;
-    gap: 3%;
-  }
-
-  .gbx-p-0 {
-    grid-area: gbx-p-0;
-    grid-column: 1/2;
-    grid-row: auto;
-  }
-  .gbx-p-1 {
-    grid-area: gbx-p-1;
-    grid-column: 2/2;
-    grid-row: auto;
-  }
-  .gbx-p-2 {
-    grid-area: gbx-p-2;
-    grid-column: 1/2;
-    grid-row: auto;
-  }
-  .gbx-p-3 {
-    grid-area: gbx-p-3;
-    grid-column: 2/2;
-    grid-row: auto;
-  }
-  .gbx-p-4 {
-    grid-area: gbx-p-4;
-    grid-column: 1/2;
-    grid-row: auto;
-  }
-  .gbx-p-5 {
-    grid-area: gbx-p-5;
-    grid-column: 2/2;
-    grid-row: auto;
-  }
-
