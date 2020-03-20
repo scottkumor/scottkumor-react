@@ -1648,6 +1648,15 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 1080px) {
    
+  /* #navBtn{
+    text-shadow:
+   -.5px -.5px 0 rgba(255, 255, 255,.7),  
+    .5px -.5px 0 rgba(255, 255, 255,.7),
+    -.5px .5px 0 rgba(255, 255, 255,.7),
+     .5px .5px 0 rgba(255, 255, 255,.7);
+  } */
+
+
   #email{
     display:none;
   }
@@ -1658,30 +1667,32 @@
     font-family: 'Inknut Antiqua', 'serif';
   }
   
+  /*
   .hko {
-    background-image: url("../images/yemu3y50g4e41.jpg"); /* The image used */
+    background-image: url("../images/yemu3y50g4e41.jpg");  The image used 
     background-size: cover;
-    position: relative; /* Needed to position the cutout text in the middle of the image */
-    height: 50vw; /* Some height */
+    position: relative;  Needed to position the cutout text in the middle of the image 
+    height: 50vw; /* Some height 
     overflow: hidden;
   }
   
   .hkot {
     background-color: rgba(255, 255, 255,.7);
     color: black;
-    font-size: 10vw; /* Responsive font size */
+    font-size: 10vw;  Responsive font size 
     font-weight: bold;
     width: 55vw;
     height: 25vh;
-    text-align: right; /* Center text */
-    position: absolute; /* Position text */
-    top: 88%; /* Position text in the middle */
-    left: 70%; /* Position text in the middle */
-    transform: translate(-46%, -45%); /* Position text in the middle */
-    mix-blend-mode: screen; /* This makes the cutout text possible */
+    text-align: right;  Center text 
+    position: absolute;  Position text 
+    top: 88%;  Position text in the middle 
+    left: 70%;  Position text in the middle 
+    transform: translate(-46%, -45%);  Position text in the middle 
+    mix-blend-mode: screen;  This makes the cutout text possible 
     overflow: hidden;
   }
 
+  */
   .bg-w {
     position: absolute;
     z-index: -1;
@@ -1702,10 +1713,17 @@
   .b-n {border: none;}
 
   .bg-c-fw {background-color: rgba(255, 255, 255,.7);}
-  .bg-c-g {background-color: rgb(170, 170, 170);}
+  .bg-c-fg {background-color: rgba(170, 170, 170, .9);}
   .bg-c-n {background-color: transparent;}
   .bg-c-w {background-color: rgb(255, 255, 255);}
   .bg-c-fk {background-color: rgba(0, 0, 0, .5);}
+
+  .g-fk {
+    background: linear-gradient(
+      rgba(0, 0, 0, .8),
+      rgba(0, 0, 0, 0.2) 200%
+    );
+  }
 
   .c-dg {color: rgb(51, 51, 51);}
   .c-k {color: rgb(0, 0, 0);}
@@ -1720,6 +1738,7 @@
   .fz-jjj {font-size: 500%;}  
   .fz-jj {font-size: 300%;}  
   .fz-j {font-size: 200%;}
+  .fz-xl {font-size: 150%;}
   .fz-l {font-size: 100%;}
   .fz-m {font-size: 70%;}
   .fz-s {font-size: 50%;}

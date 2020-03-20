@@ -8,7 +8,7 @@ const About = () => (
             <img className="bg-w" title="About Page" alt="About"
                 src="https://images.unsplash.com/reserve/bR4PBR2TRH2qEkB5DChN_IMG_5071.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
 
-            <div className="d-f df-fdc ai-c c-fw fz-j mt-xxl">
+            <div className="d-f df-fdc ai-c jc-c c-fw fz-j mt-xxl ">
                 <div className="t-i c-fw ta-j m-l">
                     I'm a Web Developer based in the Greater Chicago area. Currently I am
                     looking for positions working on the front end - HTML, CSS, JavaScript,

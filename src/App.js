@@ -1,8 +1,8 @@
 import React from "react";
-import Router from "./components/Router";
+import Nav from "./components/Nav";
 import "./App.css";
 
 
-const App = () => <Router />;
+const App = () => <Nav />;
 
 export default App;
