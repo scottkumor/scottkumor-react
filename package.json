@@ -1,6 +1,6 @@
 {
-  "homepage": "scottkumor.com",
-  "name": "scottkumor",
+  "homepage": "https://scottkumor.com",
+  "name": "scottkumor-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
