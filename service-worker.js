@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/scottkumor-react/precache-manifest.329a679f5f7a41125f26ab6f88b943d2.js"
+  "/scottkumor-react/precache-manifest.57affbb205d1b75a7e9345945391b8e1.js"
 );
 
 self.addEventListener('message', (event) => {
