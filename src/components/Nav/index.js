@@ -1,40 +1,3 @@
-// import React, { useState } from 'react'
-
-
-// function Nav(props) {
-
-//         return (
-//             <div id="nav" className="d-f jc-fe ps-f g-fk w-100 ps-sr mr-m">
-//                 <button
-//                     id="navBtn"
-//                     className="fz-xl c-fw mr-s bg-c-n c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv"
-//                     onClick={() => props.handlePageChange("Home")}>
-//                     Home
-//                 </button>
-//                 <button
-//                     id="navBtn"
-//                     className="fz-xl c-fw mr-s bg-c-n c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv"
-//                     onClick={() => props.handlePageChange("About")}>
-//                     About
-//                 </button>
-//                 <button
-//                     id="navBtn"
-//                     className="fz-xl c-fw mr-s bg-c-n c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv"
-//                     onClick={() => props.handlePageChange("Portfolio")}>
-//                     Portfolio
-//                 </button>
-//                 <button
-//                     id="navBtn"
-//                     className="fz-xl c-fw bg-c-n c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv"
-//                     onClick={() => props.handlePageChange("Contact")}>
-//                     Contact
-//                 </button>
-//             </div>
-//         )
-//     }
-
-// export default Nav;
-
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import { CSSTransition } from "react-transition-group";
@@ -75,25 +38,29 @@ export default function Nav() {
   return (
     
       <BrowserRouter>
-      
+
         <header className="Header">
-          {/* <img src={require("../assets/logo.png")} className="Logo" alt="logo" /> */}
+          <div className="Logo" alt="logo">Scott Kumor</div>
+          <div className="Container">
           <CSSTransition
             in={!isSmallScreen || isNavVisible}
             timeout={350}
             classNames="NavAnimation"
             unmountOnExit
           >
+            
             <nav className="Nav">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Contact</Link>
             </nav>
+
           </CSSTransition>
           <button onClick={toggleNav} className="Burger">
-            🍔
+            <div className=" c-w">+</div>
           </button>
+          </div>
         </header>
 
         <Switch>
