@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/scottkumor-react/static/css/main.4f871669.chunk.css",
-    "main.js": "/scottkumor-react/static/js/main.f8040278.chunk.js",
-    "main.js.map": "/scottkumor-react/static/js/main.f8040278.chunk.js.map",
-    "runtime-main.js": "/scottkumor-react/static/js/runtime-main.a6510b51.js",
-    "runtime-main.js.map": "/scottkumor-react/static/js/runtime-main.a6510b51.js.map",
-    "static/js/2.fee48e64.chunk.js": "/scottkumor-react/static/js/2.fee48e64.chunk.js",
-    "static/js/2.fee48e64.chunk.js.map": "/scottkumor-react/static/js/2.fee48e64.chunk.js.map",
-    "index.html": "/scottkumor-react/index.html",
-    "precache-manifest.57affbb205d1b75a7e9345945391b8e1.js": "/scottkumor-react/precache-manifest.57affbb205d1b75a7e9345945391b8e1.js",
-    "service-worker.js": "/scottkumor-react/service-worker.js",
-    "static/css/main.4f871669.chunk.css.map": "/scottkumor-react/static/css/main.4f871669.chunk.css.map",
-    "static/js/2.fee48e64.chunk.js.LICENSE.txt": "/scottkumor-react/static/js/2.fee48e64.chunk.js.LICENSE.txt",
-    "static/media/contact.jpg": "/scottkumor-react/static/media/contact.3663a36c.jpg"
+    "main.css": "/static/css/main.4f871669.chunk.css",
+    "main.js": "/static/js/main.b57ebc1d.chunk.js",
+    "main.js.map": "/static/js/main.b57ebc1d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fa842fda.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fa842fda.js.map",
+    "static/js/2.fee48e64.chunk.js": "/static/js/2.fee48e64.chunk.js",
+    "static/js/2.fee48e64.chunk.js.map": "/static/js/2.fee48e64.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9261c23147b86878c7cf3b86af46ec06.js": "/precache-manifest.9261c23147b86878c7cf3b86af46ec06.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4f871669.chunk.css.map": "/static/css/main.4f871669.chunk.css.map",
+    "static/js/2.fee48e64.chunk.js.LICENSE.txt": "/static/js/2.fee48e64.chunk.js.LICENSE.txt",
+    "static/media/contact.jpg": "/static/media/contact.3663a36c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a6510b51.js",
+    "static/js/runtime-main.fa842fda.js",
     "static/js/2.fee48e64.chunk.js",
     "static/css/main.4f871669.chunk.css",
-    "static/js/main.f8040278.chunk.js"
+    "static/js/main.b57ebc1d.chunk.js"
   ]
 }
