@@ -36,19 +36,23 @@ export default function Nav() {
   };
 
   return (
-    
-      <BrowserRouter>
 
-        <header className="Header">
-          <div className="Logo" alt="logo">Scott Kumor</div>
-          <div className="Container">
+    <BrowserRouter>
+
+      <header className="Header">
+        <div className="Logo" alt="logo">Scott Kumor</div>
+        <div className="Container">
+          <button onClick={toggleNav} className="Menu">
+            +
+          </button>
+          <div>
           <CSSTransition
             in={!isSmallScreen || isNavVisible}
             timeout={350}
             classNames="NavAnimation"
             unmountOnExit
           >
-            
+
             <nav className="Nav">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
@@ -57,28 +61,26 @@ export default function Nav() {
             </nav>
 
           </CSSTransition>
-          <button onClick={toggleNav} className="Burger">
-            <div className=" c-w">+</div>
-          </button>
           </div>
-        </header>
+        </div>
+      </header>
 
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+      </Switch>
 
-      </BrowserRouter>
+    </BrowserRouter>
 
   );
 }

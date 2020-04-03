@@ -1,14 +1,11 @@
 .Header {
     position: fixed;
-    top: 0; /* Stick it to the top */
+    top: 0;
     max-height: 70px;
     width: 100vw;
-  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    /* Cosmetics */
     background-color: #282c34;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
@@ -21,29 +18,37 @@
   .Container{
     display: flex;
     flex-direction: column;
+    padding-right: 5vw;
   }
 
   .Nav {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-items: right;
     background-color: #282c34;
   }
+  
   .Nav a {
+    background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%);
+    background-image: linear-gradient(30deg, transparent 50%, #fff 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    text-decoration: none;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     transition: 0.5s;
     text-decoration: none;
-    padding-left: 20%;
-    padding-right: 5%;
+    padding: 1vw;
   }
   .Nav a:hover {
-    transform: scale(1.1);
+    background-position: 100%;
+    color: #282c34;
   }
-  .Nav button {
-    padding: 10px;
+  /* old nav button */
+  /* .Nav button {
     outline: none;
     border: none;
     font-size: 20px;
@@ -54,57 +59,84 @@
     border-radius: 10px;
     cursor: pointer;
     transition: 70ms;
-  }
+  } */
   
-  .Nav button:active {
+  /* .Nav button:active {
     transform: translateY(3px);
     box-shadow: 0px 2px 0px 0px rgba(255, 0, 0, 0.25);
-  }
+  } */
   
-  .Burger {
+  .Menu {
     display: none;
-    margin: 0 30px 0 0;
+    margin: 0 6vw 0 0;
     padding: 0;
     font-size: 40px;
     border: none;
     background: none;
     outline: none;
     transition: 0.1s;
+    
   }
-  .Burger:active {
+  .Menu:active {
     transform: rotate(90deg);
   }
-  
-  @media (max-width: 700px) {
-   
-    .Nav {
-      
-      padding: 30px 0 30px;
-      background: rgba(40, 44, 47, 0.95);
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-    .Burger {
-      display: block;
-    }
-  }
-  
+
   .NavAnimation-enter {
     opacity: 0;
-    transform: scale(0.5);
+    transform: translateY(-100%);
   }
+  
   .NavAnimation-enter-active {
     opacity: 1;
-    transform: translateX(0);
-    transition: opacity 350ms, transform 350ms;
+    transform: translateY(0);
+    transition: .4s ease-in-out;
   }
+  
   .NavAnimation-exit {
     opacity: 1;
+    transform: translateY(0);
+
   }
   .NavAnimation-exit-active {
     opacity: 0;
-    transform: scale(0.5);
-    transition: opacity 350ms, transform 350ms;
+    transform: translateY(-100%);
+    transition: .4s ease-in-out;
   }
+  
+  /* mobile layout */
+  @media (max-width: 700px) {
+   
+    .Nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: #282c34;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    .Menu {
+      display: block;
+      color: #fff;
+    }
+
+    .Container{
+      padding-right: 0vw;
+    }
+
+    .Header {
+      position: fixed;
+      top: 0;
+      max-height: 70px;
+      width: 100vw;
+      background-color: #282c34;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  
   
