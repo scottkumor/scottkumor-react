@@ -10,7 +10,7 @@ import './../../assets/css/layout.css'
 import './../../assets/css/style.css'
 
 export default function Nav() {
-  const [isNavVisible, setNavVisibility] = useState(false);
+  const [isNavVisible, setNavVisibility] = useState(true);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function Nav() {
             classNames="NavAnimation"
             unmountOnExit
           >
-            <nav className="Nav mr-l">
+            <nav className="Nav">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/portfolio">Portfolio</Link>

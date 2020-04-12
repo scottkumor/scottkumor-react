@@ -1,7 +1,6 @@
 .Header {
     position: fixed;
     top: 0;
-    /* max-height: 70px; */
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -12,16 +11,20 @@
   
   .Logo {
    color: white;
+   margin: 3%
   }
   
   .Container{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+      justify-content: space-between;
+      width: 100%;
   }
 
   .Nav {
     display: flex;
     align-items: center;
+    flex-direction: row;
     background-color: #282c34;
   }
   
@@ -35,15 +38,21 @@
     transition: background 500ms ease-in-out;
     text-decoration: none;
     color: #fff;
-    font-size: 15px;
-    font-weight: 500;
     transition: 0.5s;
     text-decoration: none;
+    padding: 4%;
   }
   .Nav a:hover {
     background-position: 100%;
     color: #282c34;
   }
+
+  .Wrapper{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+  }
+
   /* old nav button */
   /* .Nav button {
     outline: none;
@@ -106,8 +115,17 @@
     .Nav {
       display: flex;
       justify-content: space-between;
-      background: #282c34;     
+      background: transparent;     
       width: 100vw;
+
+    }
+
+    .Logo{
+      margin: 5%;
+    }
+
+    .Nav a {
+      padding: 4%;
     }
 
     .Menu {
@@ -117,15 +135,11 @@
 
     .Container{
       flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
+      
     }
 
     .Wrapper{
-      width: 100%;
+      flex-direction: column;
     }
   }
-
-  
   
