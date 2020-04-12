@@ -40,28 +40,26 @@ export default function Nav() {
     <BrowserRouter>
 
       <header className="Header">
-        <div className="Logo" alt="logo">Scott Kumor</div>
-        <div className="Container">
-          <button onClick={toggleNav} className="Menu">
-            +
-          </button>
-          <div>
+        <div className="Wrapper">
+          <div className="Container">
+            <div className="Logo" alt="logo">Scott Kumor</div>
+            <button onClick={toggleNav} className="Menu">
+              +
+            </button>
+          </div>
           <CSSTransition
             in={!isSmallScreen || isNavVisible}
             timeout={350}
             classNames="NavAnimation"
             unmountOnExit
           >
-
-            <nav className="Nav">
+            <nav className="Nav mr-l">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Contact</Link>
             </nav>
-
           </CSSTransition>
-          </div>
         </div>
       </header>
 
