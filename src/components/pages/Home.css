@@ -1,0 +1,52 @@
+  
+  .koImg {
+    background-image: url("../../assets/images/yemu3y50g4e41.jpg");  
+    background-size: cover;
+     position: relative;  /*Needed to position the cutout text in the middle of the image  */
+    height: 50vw;  /*Some height */
+    overflow: hidden;
+    z-index: -99;
+  }
+  
+  .koTxtOne {
+    /* background-color: rgba(255, 255, 255,.6);
+    color: #282c34; */
+    background: 
+    linear-gradient( rgba(255, 255, 255, .75) 50%, transparent 100%);    
+    color: #282c34;
+    font-size: 1vw;  
+    width: 55vw;
+    height: 30vh;
+    text-align: left;  
+    position: absolute;  /*Position text */
+    top: 80%;  /*Position text in the middle */
+    left: 71%;  /*Position text in the middle */
+    transform: translate(-46%, -45%);  /*Position text in the middle */
+    overflow: hidden;
+    padding: 1%;
+    padding-right:5%;
+    text-indent: 2%;
+    font-weight: bold;
+    /* mix-blend-mode: screen;  This makes the cutout text possible */
+
+  }
+  
+  .koTxtTwo {
+    background: linear-gradient( transparent 50%, rgba(255, 255, 255,.75) 75%);
+    color: black;
+    font-size: 4vw;  
+    font-weight: bold;
+    width: 22vw;
+    height: 16vh;
+    text-align: center;  
+    padding-top: 15%;
+    position: absolute;  /*Position text */
+    top: 10%;  /*Position text in the middle */
+    left: 11%;  /*Position text in the middle */
+    transform: translate(-46%, -45%);  /*Position text in the middle */
+    mix-blend-mode: screen;  /*This makes the cutout text possible */
+    overflow: hidden;
+  }
+
+
+  /* background: linear-gradient(to bottom, #333, #333 50%, #eee 95%, #333 100%); */
