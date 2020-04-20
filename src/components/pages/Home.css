@@ -1,12 +1,4 @@
   
-  .koImg {
-    background-image: url("../../assets/images/yemu3y50g4e41.jpg");  
-    background-size: cover;
-     position: relative;  /*Needed to position the cutout text in the middle of the image  */
-    height: 50vw;  /*Some height */
-    overflow: hidden;
-    z-index: -99;
-  }
   
   .koTxtOne {
     /* background-color: rgba(255, 255, 255,.6);
@@ -50,3 +42,39 @@
 
 
   /* background: linear-gradient(to bottom, #333, #333 50%, #eee 95%, #333 100%); */
+
+
+    
+  body {
+    background: url("../../assets/images/sunset2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+  
+  
+  .contentWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+  }
+  
+  .p1 {
+    font-size: 4vw;  
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 3px 2px black;
+  
+  }
+
+  .p2{
+    background: rgba(255, 255, 255, .6);
+    width: 80vw;
+    text-indent: 2vw;
+    padding: 1vw;
+    margin: 20vh;
+  }

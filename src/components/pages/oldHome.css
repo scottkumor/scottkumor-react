@@ -1,0 +1,26 @@
+  
+  .hko {
+    background-image: url("../../assets/images/yemu3y50g4e41.jpg");  
+    background-size: cover;
+     position: relative;  /*Needed to position the cutout text in the middle of the image  */
+    height: 50vw;  /*Some height */
+    overflow: hidden;
+    z-index: -99;
+  }
+  
+  .hkot {
+    background-color: rgba(255, 255, 255,.7);
+    color: black;
+    font-size: 10vw;  
+    font-weight: bold;
+    width: 55vw;
+    height: 25vh;
+    text-align: right;  
+    position: absolute;  /*Position text */
+    top: 88%;  /*Position text in the middle */
+    left: 70%;  /*Position text in the middle */
+    transform: translate(-46%, -45%);  /*Position text in the middle */
+    mix-blend-mode: screen;  /*This makes the cutout text possible */
+    overflow: hidden;
+  }
+  

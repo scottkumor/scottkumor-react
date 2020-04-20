@@ -10,7 +10,7 @@ import Contact from "./../pages/Contact";
 // import './../../assets/css/style.css'
 
 export default function Nav() {
-  const [isNavVisible, setNavVisibility] = useState(true);
+  const [isNavVisible, setNavVisibility] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
