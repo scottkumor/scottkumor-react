@@ -1,57 +1,12 @@
-  
-  
-  .koTxtOne {
-    /* background-color: rgba(255, 255, 255,.6);
-    color: #282c34; */
-    background: 
-    linear-gradient( rgba(255, 255, 255, .75) 50%, transparent 100%);    
-    color: #282c34;
-    font-size: 1vw;  
-    width: 55vw;
-    height: 30vh;
-    text-align: left;  
-    position: absolute;  /*Position text */
-    top: 80%;  /*Position text in the middle */
-    left: 71%;  /*Position text in the middle */
-    transform: translate(-46%, -45%);  /*Position text in the middle */
-    overflow: hidden;
-    padding: 1%;
-    padding-right:5%;
-    text-indent: 2%;
-    font-weight: bold;
-    /* mix-blend-mode: screen;  This makes the cutout text possible */
-
-  }
-  
-  .koTxtTwo {
-    background: linear-gradient( transparent 50%, rgba(255, 255, 255,.75) 75%);
-    color: black;
-    font-size: 4vw;  
-    font-weight: bold;
-    width: 22vw;
-    height: 16vh;
-    text-align: center;  
-    padding-top: 15%;
-    position: absolute;  /*Position text */
-    top: 10%;  /*Position text in the middle */
-    left: 11%;  /*Position text in the middle */
-    transform: translate(-46%, -45%);  /*Position text in the middle */
-    mix-blend-mode: screen;  /*This makes the cutout text possible */
-    overflow: hidden;
-  }
-
-
-  /* background: linear-gradient(to bottom, #333, #333 50%, #eee 95%, #333 100%); */
 
 
     
-  body {
-    background: url("../../assets/images/sunset2.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  .bg {
+    background: url("../../assets/images/sunset2.jpg"); 
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    
   }
   
   
@@ -68,13 +23,36 @@
     font-weight: bold;
     color: white;
     text-shadow: 3px 3px 2px black;
-  
+
   }
 
   .p2{
-    background: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .8);
     width: 80vw;
+    height:inherit;
     text-indent: 2vw;
     padding: 1vw;
-    margin: 20vh;
+    margin: 16vh;
   }
+
+  
+
+  /* mobile layout overrides */
+  @media (max-width: 720px) {
+
+
+    
+
+    .p1 {
+      font-size: 10vw;  
+    }
+
+    .p2{
+      width: 80vw;
+      text-indent: 6vw;
+      padding: 3vw;
+      font-size: 3vw;  
+
+    }
+  }
+
