@@ -1,12 +1,14 @@
 
 
     
-  .bg {
-    background: url("../../assets/images/sunset2.jpg"); 
-    height: 100%;
-    background-position: center;
+  html {
+    background-image: url("../../assets/images/soon5.jpg") ; 
+    background-position: center center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
+    background-color: black;
+
   }
   
   

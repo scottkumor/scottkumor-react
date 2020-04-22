@@ -2,7 +2,6 @@ import React from 'react'
 import './Home.css'
 
 const Home = () => (
-    <div className="bg">
     <div className="contentWrap">
         <div className="p1">Welcome.</div>
         <div className="p2">
@@ -12,7 +11,7 @@ const Home = () => (
             the best ways to reach out to me should you want to, as well as the option to generate a PDF of my Résumé.
          </div>
     </div>
-    </div>
+    
 )
 
 export default Home;
