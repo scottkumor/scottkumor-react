@@ -1,17 +1,18 @@
 import React from 'react'
-import DB from './../data/db.json'
+import './../components/Jumper.css'
 
-const Jumper = () => (
+function Jumper(props) {
 
-//map db here
-
-    <div className="">
-        <a className="" href="">
-            <div className=""></div>
-            <img alt="" title="" src="" />
-        </a>
-    </div>
-
-);
+    return (
+        <div className="cardWrap">
+            <img className="cardImg" alt={props.alt} title={props.title} src={props.image} />
+            <div className="legend">{props.name}</div>
+            {/* <a className="linkWrap" href={props.link}>
+                <div className="title">{props.name}</div>
+                
+            </a> */}
+        </div>
+    )
+};
 
 export default Jumper;

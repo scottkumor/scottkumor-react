@@ -1,58 +1,62 @@
-{
-    "projects": [
-        {
-            "name": "Password Generator",
-            "image": "/images/john-macdonald-k8037LJCGQw-unsplash.jpg",
-            "link": "https://scottkumor.github.io/Password-Generator/",
-            "alt": "Password Generator",
-            "title": "Password Generator",
-            "credit": "Photo by Jason Dent on Unsplash",
-            "description": ""
-        },
-        {
-            "name": "Day Planner",
-            "image": "/images/carolyn-v-3ZvHsFiZyME-unsplash.jpg",
-            "link": "https://scottkumor.github.io/Day-Planner/",
-            "alt": "Day Planner",
-            "title": "Day Planner",
-            "credit": "Photo by Carolyn V on Unsplash",
-            "description": ""
-        },
-        {
-            "name": "Weather Dashboard",
-            "image": "/images/john-macdonald-k8037LJCGQw-unsplash.jpg",
-            "link": "https://scottkumor.github.io/Weather-Dashboard/",
-            "alt": "Weather Dashboard",
-            "title": "Weather Dashboard",
-            "credit": "Photo by John Macdonald on Unsplash",
-            "description": ""
-        },
-        {
-            "name": "Spotlight",
-            "image": "/images/spotlight.jpg",
-            "link": "https://iedson.github.io/spotlight/",
-            "alt": "Spotlight",
-            "title": "Spotlight",
-            "credit": "Image by Izzy Edson",
-            "description": ""
-        },
-        {
-            "name": "Sovest",
-            "image": "/images/main-logo.png",
-            "link": "https://sovest.herokuapp.com/",
-            "alt": "Sovest",
-            "title": "Sovest",
-            "credit": "Image by Izzy Edson",
-            "description": ""
-        },
-        {
-            "name": "uCTAnon",
-            "image": "/images/logoSmall.png",
-            "link": "http://uctanon.herokuapp.com/",
-            "alt": "uCTAnon",
-            "title": "uCTAnon",
-            "credit": "Image by Scott Kumor",
-            "description": ""
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "name": "Password Generator",
+        "image": "/images/jason-dent-3wPJxh-piRw-unsplash.jpg",
+        "link": "https://scottkumor.github.io/Password-Generator/",
+        "alt": "Password Generator",
+        "title": "Password Generator",
+        "credit": "Photo by Jason Dent on Unsplash",
+        "description": ""
+    },
+    {
+        "id": 2,
+        "name": "Day Planner",
+        "image": "/images/carolyn-v-3ZvHsFiZyME-unsplash.jpg",
+        "link": "https://scottkumor.github.io/Day-Planner/",
+        "alt": "Day Planner",
+        "title": "Day Planner",
+        "credit": "Photo by Carolyn V on Unsplash",
+        "description": ""
+    },
+    {
+        "id": 3,
+        "name": "Weather Dashboard",
+        "image": "/images/john-macdonald-k8037LJCGQw-unsplash.jpg",
+        "link": "https://scottkumor.github.io/Weather-Dashboard/",
+        "alt": "Weather Dashboard",
+        "title": "Weather Dashboard",
+        "credit": "Photo by John Macdonald on Unsplash",
+        "description": ""
+    },
+    {
+        "id": 4,
+        "name": "Spotlight",
+        "image": "/images/spotlight.jpg",
+        "link": "https://iedson.github.io/spotlight/",
+        "alt": "Spotlight",
+        "title": "Spotlight",
+        "credit": "Image by Izzy Edson",
+        "description": ""
+    },
+    {
+        "id": 5,
+        "name": "Sovest",
+        "image": "/images/main-logo.png",
+        "link": "https://sovest.herokuapp.com/",
+        "alt": "Sovest",
+        "title": "Sovest",
+        "credit": "Image by Izzy Edson",
+        "description": ""
+    },
+    {
+        "id": 6,
+        "name": "uCTAnon",
+        "image": "/images/logoSmall.png",
+        "link": "http://uctanon.herokuapp.com/",
+        "alt": "uCTAnon",
+        "title": "uCTAnon",
+        "credit": "Image by Scott Kumor",
+        "description": ""
+    }
+]

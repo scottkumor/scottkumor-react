@@ -1,7 +1,7 @@
 
 
     
-  html {
+  /* #root {
     background-image: url("../../assets/images/soon5.jpg") ; 
     background-position: center center;
     background-repeat: no-repeat;
@@ -9,10 +9,10 @@
     background-size: cover;
     background-color: black;
 
-  }
+  } */
   
   
-  .contentWrap{
+  .contentWrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,9 +41,6 @@
 
   /* mobile layout overrides */
   @media (max-width: 720px) {
-
-
-    
 
     .p1 {
       font-size: 10vw;  

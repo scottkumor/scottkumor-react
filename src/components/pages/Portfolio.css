@@ -1,18 +1,68 @@
-.portWrapper{
+.portWrap{
+    margin-top: 25vh;
+    margin-right: 20vw;
+    margin-left: 20vw;
+    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin:10vw;
+    
 }
 
+.cardImg {
+    max-width: 40vw;
+    max-height: auto;
+}
 
+.gitLink{
+    text-decoration: none;
+    outline: none;
+}
 
-html {
+.linkWrap{
+    background-color: rgba(255,255,255,.9);
+    margin: 2vw;
+    padding: 2vw;
+    text-align: center;
+    width: 40vw;
+    --notchSize: 20px;
+  
+  clip-path: 
+    polygon(
+      0% var(--notchSize), /*top left*/
+      var(--notchSize) 0%, /*top left*/
+      calc(100% - var(--notchSize)) 0%, /*top right*/ 
+      100% var(--notchSize), /*top right*/
+      100% calc(100% - var(--notchSize)), /*bottom right*/
+      calc(100% - var(--notchSize)) 100%, /*bottom right*/
+      var(--notchSize) 100%, /*bottom left*/
+      0% calc(100% - var(--notchSize))/*bottom left*/
+    );
+}
+
+.carousel .carousel-status {
+    position: relative;
+        text-align: center;
+        font-size: 1vw;
+        text-shadow: 1px 1px 1px rgba(#000, 0.9);
+        color: #fff;
+}
+
+.carousel .control-dots {
+    position: unset;
+    padding: 0;
+    font-size: 2vw;
+}
+
+.carousel .dot {
+    outline: none;
+}
+/* body {
         background-image: url("../../assets/images/soon3.jpg") ; 
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         background-color: black;
-}
+} */
