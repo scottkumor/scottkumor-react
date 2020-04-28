@@ -1,133 +1,134 @@
-.Header {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #282c34;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .Wrapper{
-    width: 100%;
-    display:flex;
+
+.navBar {
+  width: 100vw;
+  background-color: #111;
+  color: white;
+  position: fixed;
+  top: 0;
+  max-height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.headWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.navLink {
+  padding: 0 2vh 0 1vh;
+  text-decoration: none;
+}
+
+.navLink:link {
+  color: white;
+}
+
+/* visited link */
+.navLink:visited {
+  color: white;
+}
+
+/* mouse over link */
+.navLink:hover {
+  color: red;
+}
+
+/* selected link */
+.navLink:active {
+  color: yellow;
+}
+
+.links {
+font-weight: bold;
+padding: 0 4vw 2vw 2vw;
+text-align: right;
+background-color: #111;
+display: flex;
+flex-direction: column;
+width: 30vw;
+min-width: 10vw;
+align-self: flex-end;
+border-bottom-left-radius:30%;
+font-size: 4vw;
+
+}
+
+.scoop:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: relative;
+  top:9px;
+  right: 51px;
+  height:51px;
+  width: 44px;
+  border-top-right-radius: 50%;
+  background:transparent;
+  box-shadow: 20px 0 0 0 #111;
+
+}
+
+
+.show-nav {
+  height: 0;
+  overflow: hidden;
+ 
+}
+
+.logo {
+  padding-left: 5vw;
+}
+
+.toggle {
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-size: 7vh;
+  padding-right: 5vw;
+
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+
+  .navBar{
     flex-direction: row;
-  }
-
-  .Container{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin-left: 3%;
-  }
-
-  .Nav {
-    display: flex;
     align-items: center;
-    background-color: #282c34;
-    margin-right: 3%;
-    width: 100vw;
-
+    padding: 0 4vw 0 0;
   }
+
   
-  .Logo {
-    color: white;
-    font-size: x-large;
-    white-space: nowrap;
-   }
 
-  .Nav a {
-    background-image: -webkit-linear-gradient(30deg, transparent 50%, #fff 50%);
-    background-image: linear-gradient(30deg, transparent 50%, #fff 50%);
-    background-size: 500px;
-    background-repeat: no-repeat;
-    background-position: -1%;
-    -webkit-transition: background 500ms ease-in-out;
-    transition: background 500ms ease-in-out;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.5s;
-    text-decoration: none;
-    padding: 4%;
-    font-size: x-large;
+  .toggle {
+      display: none;
   }
 
-  .Nav a:hover {
-    background-position: 100%;
-    color: #282c34;
+  .links {
+    flex-direction: row;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 0 0 0;
+    font-size: inherit;
+
   }
-  
-  .Menu {
+
+  .scoop:before {
     display: none;
-    margin: 0 6vw 0 0;
-    padding: 0;
-    font-size: 40px;
-    border: none;
-    background: none;
-    outline: none;
-    transition: 0.1s;
-    
-  }
-  .Menu:active {
-    transform: rotate(90deg);
-  }
-
-  .NavAnimation-enter {
-    opacity: 0;
-    transform: translateY(-100%);
   }
   
-  .NavAnimation-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: .4s ease-in-out;
-  }
-  
-  .NavAnimation-exit {
-    opacity: 1;
-    transform: translateY(0);
-
-  }
-  .NavAnimation-exit-active {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: .4s ease-in-out;
-  }
-  
-  /* mobile layout overrides */
-  @media (max-width: 720px) {
-   
-    .Nav {
-      display: flex;
-      justify-content: space-between;
-      background: transparent;     
-    }
-
-    .Logo{
-      margin: 5%;
-      font-size: large;
-    }
-
-    .Nav a {
-      padding: 4%;
-      font-size: small;
-    }
-
-    .Menu {
-      display: block;
-      color: #fff;
-    }
-
-    .Container{
-      flex-direction: row;
-      
-    }
-
-    .Wrapper{
-      flex-direction: column;
-      padding-right: 0;
-    }
-  }
-  
+}
