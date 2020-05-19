@@ -90,7 +90,8 @@ import Home from "./../pages/Home";
 import About from "./../pages/About";
 import Portfolio from "./../pages/Portfolio";
 import Contact from "./../pages/Contact";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 export default class Nav extends Component {
   state = {
@@ -120,6 +121,7 @@ export default class Nav extends Component {
       }
     ];
 
+
     return (
 
       <BrowserRouter>
@@ -128,49 +130,50 @@ export default class Nav extends Component {
             <div className="logo">
               Scott Kumor
             </div>
-            <div id="toggle" className="toggle" onClick={this.Toggle}>
-              <div className="icon">+</div>
-            </div>
+            <FontAwesomeIcon
+              id="toggle"
+              icon={faPlus} 
+              className={this.state.toggle ? "toggled " : "toggle "} 
+              onClick={this.Toggle}
+              />
           </div>
-            <div className={this.state.toggle ? "links show-nav" : "links scoop"}>
-              {
-                links.map((objLink, i) => {
-                  return (<div key={i}><a className="navLink" href={objLink.link}>{objLink.text}</a></div>)
-                })
-              }
-            </div>
-            
+          <div className={this.state.toggle ? "links show-nav" : "links hide-nav"}>
+            {
+              links.map((objLink, i) => {
+                return (
+                    <a  className="navLink" key={i} href={objLink.link}>{objLink.text}</a>
+                  )
+              })
+            }
+          </div>
+
         </div>
-        
-        
-          
 
-
-            
-                  
-        
-
-
-
-
-  
         <Switch>
           <Route exact path="/">
             <Home />
+            {this.props.children}
+
           </Route>
           <Route path="/about">
             <About />
+            {this.props.children}
+
           </Route>
           <Route path="/portfolio">
             <Portfolio />
+            {this.props.children}
+
           </Route>
           <Route path="/contact">
             <Contact />
+            {this.props.children}
+
           </Route>
         </Switch>
       </BrowserRouter>
 
-      
+
     );
   }
 }

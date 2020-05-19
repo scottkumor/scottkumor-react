@@ -1,15 +1,13 @@
 
 
     
-  /* #root {
-    background-image: url("../../assets/images/soon5.jpg") ; 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  .page {
+    height: 100vh;
     background-size: cover;
-    background-color: black;
+    background-repeat: no-repeat;
+    background-position: top center;
 
-  } */
+  }
   
   
   .contentWrap {
@@ -17,41 +15,52 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20vh;
   }
   
   .p1 {
-    font-size: 4vw;  
+    font-size: 15vh;  
     font-weight: bold;
+    font-style: italic;
     color: white;
-    text-shadow: 3px 3px 2px black;
-
+    margin-top: 15vh;
+    color: transparent;
+    background: rgb(206, 91, 73);
+    text-shadow: 0px 3px 1px rgba(255,255,255,0.6);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    
   }
 
   .p2{
-    background: rgba(255, 255, 255, .8);
-    width: 80vw;
-    height:inherit;
-    text-indent: 2vw;
-    padding: 1vw;
-    margin: 16vh;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.8) 10%, rgba(255,255,255,.8) 90%, transparent 100%); 
+    max-width: 60vw;
+    text-align: center;
+    padding: 5vw;
+    overflow: visible;
+    font-size: 2vh;  
+
   }
 
   
 
-  /* mobile layout overrides */
-  @media (max-width: 720px) {
+  /* mobile  overrides */
+  @media (max-width: 768px) {
 
+    
     .p1 {
-      font-size: 10vw;  
+      display:none;
     }
 
     .p2{
-      width: 80vw;
-      text-indent: 6vw;
-      padding: 3vw;
-      font-size: 3vw;  
+      margin-top:30vh;
+      padding: 15vw;
+      font-size: 1.5vh;  
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.8) 2%, rgba(255,255,255,.8) 98%, transparent 100%); 
+      
 
-    }
   }
 
+}
