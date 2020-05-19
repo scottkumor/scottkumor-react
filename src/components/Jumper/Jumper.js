@@ -1,5 +1,5 @@
 import React from 'react'
-import './../components/Jumper.css'
+import './Jumper.css'
 
 function Jumper(props) {
 

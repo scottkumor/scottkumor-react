@@ -26,7 +26,7 @@ function Contact() {
    return (
    <>
         <div className="bg-w">
-            <img className="bg-w" title="Contact Page" alt="Contact" src={require('./../../assets/images/contact.jpg')} />
+            <img className="bg-w" title="Contact Page" alt="Contact" src={require('./../../../assets/images/contact.jpg')} />
             <div className="mt-xxl d-f df-fdc jc-c ai-c">
                 <div id="email">scott.kumor1212@gmail.com</div>
                 <div className="t-i fz-j w-75vw c-k p-m lh-s m-s">   

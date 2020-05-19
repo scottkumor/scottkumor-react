@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import "./Portfolio.css"
-import Jumper from '../Jumper'
-import DB from "./../../data/db.json"
+import "./style.css"
+import Jumper from '../../Jumper/Jumper'
+import DB from "../../../data/db.json"
 
 class Portfolio extends Component {
 
@@ -51,7 +51,7 @@ class Portfolio extends Component {
 export default Portfolio;
 
 
-{/* <div className=""> Photo by Carolyn V on Unsplash
+/* <div className=""> Photo by Carolyn V on Unsplash
 <a className="" href="https://scottkumor.github.io/Day-Planner/">
     <div className="">Day Planner</div>
     <img alt="" className="" src="./assets/images/soon3.jpg" />
@@ -77,4 +77,4 @@ export default Portfolio;
     <div className="">Sovest</div>
     <img alt="" className="" src="./assets/images/main-logo.png" />
 </a>
-</div> */}
+</div> */

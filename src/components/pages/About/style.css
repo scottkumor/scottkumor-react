@@ -88,7 +88,7 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   
   /* backgrounds */
   .cd-section:nth-child(1) {
-    background-image: url("../../assets/images/soon.jpg");
+    background-image: url("./../../../assets/images/soon.jpg");
     
 
   }
@@ -99,7 +99,7 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   } */
   
   .cd-section:nth-child(3) {
-    background-image: url("../../assets/images/soon2.jpg");
+    background-image: url("./../../../assets/images/soon2.jpg");
     
 
   }
@@ -110,11 +110,11 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   } */
 
   .cd-section:nth-child(5) {
-    background-image: url("../../assets/images/soon4.jpg");
+    background-image: url("./../../../assets/images/soon4.jpg");
 
   }
 
   .cd-section:nth-child(7) {
-    background-image: url("../../assets/images/sunset2.jpg");
+    background-image: url("./../../../assets/images/sunset2.jpg");
     min-height: 100vh;
   }
