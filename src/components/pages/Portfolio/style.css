@@ -20,7 +20,7 @@
     outline: none;
 }
 
-.linkWrap{
+.oldLinkWrap{
     background-color: rgba(255,255,255,.9);
     margin: 2vw;
     padding: 2vw;
@@ -39,6 +39,30 @@
       var(--notchSize) 100%, /*bottom left*/
       0% calc(100% - var(--notchSize))/*bottom left*/
     );
+}
+
+.linkWrap{
+    
+        position: relative;
+        width: 30vw;
+        height: 25vh;
+        background: red;
+        border-radius: 50% / 10%;
+        color: white;
+        text-align: center;
+        padding: 2vw 2vw 0vw 2vw;
+        margin:2vh;
+}    
+.linkwrap:before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        right: -5%;
+        left: -5%;
+        background: inherit;
+        border-radius: 5% / 50%;
+      
 }
 
 .carousel .carousel-status {

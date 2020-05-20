@@ -22,28 +22,12 @@
 .logo {
   margin-left: 3vh;
   font-size: 5vw;
-  color:rgb(179,221,242)
+  color:rgb(179,221,242);
+  white-space: nowrap;
 }
 
 .navLink {
   text-decoration: none;
-
-}
-
-.navLink:link {
-  color: white;
-}
-
-.navLink:visited {
-  color: rgb(179,221,242);
-}
-
-.navLink:hover {
-  color: rgb(254,36,0);
-}
-
-.navLink:active {
-  color: rgba(254,36,0);
 }
 
 

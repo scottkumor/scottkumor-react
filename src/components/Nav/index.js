@@ -85,11 +85,7 @@
 import React, { Component } from 'react';
 // import { CSSTransition } from "react-transition-group";
 import "./style.css";
-import { BrowserRouter, Switch, Route, } from "react-router-dom";
-import Home from "./../pages/Home";
-import About from "./../pages/About";
-import Portfolio from "./../pages/Portfolio";
-import Contact from "./../pages/Contact";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
@@ -124,12 +120,12 @@ export default class Nav extends Component {
 
     return (
 
-      <BrowserRouter>
-        <div className="navBar">
-          <div className="headWrap">
-            <div className="logo">
-              Scott Kumor
-            </div>
+    <div className="navBar">
+      <div className="logo">
+        Scott Kumor
+      </div>
+      <div className="headWrap"> 
+            
             <FontAwesomeIcon
               id="toggle"
               icon={faPlus} 
@@ -141,37 +137,56 @@ export default class Nav extends Component {
             {
               links.map((objLink, i) => {
                 return (
-                    <a  className="navLink" key={i} href={objLink.link}>{objLink.text}</a>
-                  )
+                    <NavLink activeStyle={{
+                      fontWeight: "bold",
+                      color: "red"
+                    }} className="navLink" key={i} to={objLink.link}>{objLink.text}</NavLink>
+                    
+                    )
               })
             }
           </div>
 
         </div>
 
-        <Switch>
+      // <BrowserRouter>
+        /* <div className="navBar">
+          <div className="headWrap"> */
+            
+            /* <FontAwesomeIcon
+              id="toggle"
+              icon={faPlus} 
+              className={this.state.toggle ? "toggled " : "toggle "} 
+              onClick={this.Toggle}
+              />
+          </div>
+          <div className={this.state.toggle ? "links show-nav" : "links hide-nav"}>
+            {
+              links.map((objLink, i) => {
+                return (
+                    <NavLink  className="navLink" key={i} href={objLink.link}>{objLink.text}</NavLink>
+                  )
+              })
+            }
+          </div>
+
+        </div> */
+
+        /* <Switch>
           <Route exact path="/">
             <Home />
-            {this.props.children}
-
           </Route>
           <Route path="/about">
             <About />
-            {this.props.children}
-
           </Route>
           <Route path="/portfolio">
             <Portfolio />
-            {this.props.children}
-
           </Route>
           <Route path="/contact">
             <Contact />
-            {this.props.children}
-
           </Route>
-        </Switch>
-      </BrowserRouter>
+        </Switch> */
+      /* </BrowserRouter> */
 
 
     );

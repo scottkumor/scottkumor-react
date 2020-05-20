@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Inknut+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
 
 html {
-  font-family: 'Inknut Antiqua', serif;
   background-color: black;
 }
 
 body{
   margin: 0;
+
 }
 

@@ -9,6 +9,7 @@ import mobileImage from './../../../assets/images/contact.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
+
 const Home = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const imageUrl = windowWidth > 768 ? desktopImage : mobileImage;
@@ -24,25 +25,29 @@ const Home = () => {
             window.removeEventListener('resize', handleWindowResize);
         }
     }, []);
+
+    
     
     return (
 
-        <div id="page" className="page" style={{ backgroundImage: `url(${imageUrl})` }}>
+        <div id="homePage" className="homePage" style={{ backgroundImage: `url(${imageUrl})` }}>
+
             <div className="contentWrap">
                 <ScrollAnimation 
                     className="p1" 
-                    animateIn='fadeIn'
+                    animateIn='fadeInDown'
                     animateOut="fadeOut"
                     animateOnce={true}
+                    duration={3}
                 > 
                     Scott Kumor
                 </ScrollAnimation>
 
                 <FadeIn
-                    delay={2000}
+                    delay={5000}
                 >
                     <ScrollAnimation 
-                        delay={1500}
+                        delay={4500}
                         animateIn="bounce"
                         animateOut="bounce"
                         duration={3}
@@ -56,9 +61,10 @@ const Home = () => {
                 </FadeIn>
 
                 <ScrollAnimation className="p2"
-                    animateIn='fadeInUp'
-                    animateOut='fadeOut'
+                    animateIn='fadeInDown'
+                    animateOut='fadeOutDown'
                     initiallyVisible={false}
+                    duration={3}
                 >
                         Welcome to my personal website. The buttons in the navigation bar will take you to various parts of the site -
                         'About' will direct you my background information. 'Portfolio' will let you view
@@ -69,7 +75,7 @@ const Home = () => {
                 
                 <ScrollAnimation 
                     className="btnWrap"
-                    animateIn='fadeInUp'
+                    animateIn='fadeInDown'
                     animateOut='fadeOutDown'
                 >
                     <Link className="btn"to="/about">About</Link>
@@ -77,10 +83,7 @@ const Home = () => {
                     <Link className="btn"to="/contact">Contact</Link> 
                 </ScrollAnimation>
 
-            </div>
-
-
-            
+            </div>   
         </div>
 
     )

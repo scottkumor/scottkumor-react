@@ -1,60 +1,88 @@
-import React from 'react'
+import React, { useState, useEffect } from "react"; import DB from "../../../data/letters.json"
+import Nav from "./../../Nav"
+import "./style.css"
+import "./letters.scss"
+import desktopImage from './../../../assets/images/HomeIMG-Brad-Knight-Unsplash.jpg';
+import mobileImage from './../../../assets/images/sunset.jpg';
 
 
 function Contact() {
 
-    function changeText(){
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const imageUrl = windowWidth > 768 ? desktopImage : mobileImage;
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        }
+    }, []);
+
+    function changeText() {
         var btn = document.getElementById('copyBtn');
-        btn.innerHTML="Copied";
+        btn.innerHTML = "Copied";
     }
 
-   function copyEmail() {
+    function copyEmail() {
 
         var str = document.getElementById("email").innerHTML;
         function listener(e) {
             e.clipboardData.setData("text/html", str);
             e.clipboardData.setData("text/plain", str);
-            e.preventDefault();    
+            e.preventDefault();
         }
         document.addEventListener("copy", listener);
         document.execCommand("copy");
         document.removeEventListener("copy", listener);
-        
+
         changeText();
     }
 
-   return (
-   <>
-        <div className="bg-w">
-            <img className="bg-w" title="Contact Page" alt="Contact" src={require('./../../../assets/images/contact.jpg')} />
-            <div className="mt-xxl d-f df-fdc jc-c ai-c">
-                <div id="email">scott.kumor1212@gmail.com</div>
-                <div className="t-i fz-j w-75vw c-k p-m lh-s m-s">   
-                    Click "Email Me" below to generate a new message to me using your default mail app. 
-                    Click "Copy Email" to to copy my email address and paste into the subject line 
-                    of the mailing service of your choice. I typically reply within 1-2 business days.
+
+
+    return (
+        <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${imageUrl})` }}>
+
+            <div className="wrapper">
+                <div className="letters">
+                    {DB.map(letter => (
+                        <span key={letter.id} className="letter">{letter.char}</span>
+                    ))}
                 </div>
-                <form className="mt-xxl" method="post" action="mailto:scott.kumor1212@gmail.com" >
-                    <input 
-                        className="fz-j bg-c-fg c-k c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv m-s"
-                        type="submit" value="Send Email" 
-                    /> 
+
+            </div>
+
+            <div className="contactContent">
+                <div id="email" className="reveal">scott.kumor1212@gmail.com</div>
+                <div className="block">
+                    Click <div className="upper">"email me"</div> below to generate a new message to me using your default mail app.
+                        Click <div className="upper">"copy email"</div> to to copy my email address and paste into the subject line
+                        of the mailing service of your choice. I typically reply within 1-2 business days.
+                </div>
+                <form className="" method="post" action="mailto:scott.kumor1212@gmail.com" >
+                    <input
+                        className=""
+                        type="submit" value="Send Email"
+                    />
                 </form>
-                <button 
+                <button
                     id="copyBtn"
                     onClick={copyEmail}
-                    className=" fz-j mt-xxl bg-c-fg c-k c-w-fc bg-c-n-fc c-dg-hv bg-c-fw-hv w-25 m-s">
+                    className="">
                     Copy Email
                 </button>
-                
-            </div>
-            <div className="c-w bps-sb">This website was built from scratch using React.js</div>
 
+            </div>
+            <div className="">This website was built from scratch using React.js</div>
+
+            <Nav />
         </div>
-    </>
-   )
+    )
 }
 
 export default Contact;
-
-// 

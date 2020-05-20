@@ -1,11 +1,12 @@
 import React from 'react'
+import Nav from "./../../Nav"
 import "./style.css"
 
 const About = () => (
 
     <>
         
-
+        <Nav />
         <main>
 
             <section className="cd-section cd-section--bg-fixed">
