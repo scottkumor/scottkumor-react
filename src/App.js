@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+import 'normalize.css';
 import "./App.css";
 import Home from "./components/pages/Home/index.js";
 import About from "./components/pages/About/index.js";
@@ -7,18 +8,19 @@ import Portfolio from "./components/pages/Portfolio/index.js";
 import Contact from "./components/pages/Contact/index.js";
 
 
+
 function App() {
     
 return (
       
       <Switch>
-        <Route path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
-        <Route path="/portfolio">
+        <Route exact path="/portfolio">
           <Portfolio />
         </Route>
-        <Route path="/contact">
+        <Route exact path="/contact">
           <Contact />
         </Route>
         <Route path="/">

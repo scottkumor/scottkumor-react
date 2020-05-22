@@ -2,7 +2,7 @@
 
 $colors: (
     background: #EEE,
-    text: #1d1f20
+    text: #111
 );
 
 $font: (
@@ -14,7 +14,7 @@ $font: (
 $config: (
     animated: false,
     nb-letters: 29,
-    animation-length: 17s,
+    animation-length: 13s,
     mask-letters: ("A","B","C","Č","Ć","D","Đ","E","F","G","H","I",
     "J","K","L","M","N","O","P","Q","R","S","Š","T","U","V","W","X","Y",
     "Z","Ž","a","b","c","č","ć","d","đ","e","f","g","h","i","j","k","l",
@@ -77,10 +77,9 @@ $config: (
 
 .wrapper {
     text-align: left;
-    padding-left: 2vw;
     position: relative;
-    top: 0%;
-    left: 40%;
+    top: 10vh;
+    left: 0;
     width: 79vw;
     font-size: 0;
     transform: translate(-50%);
@@ -98,7 +97,7 @@ $config: (
     font-size: font(size);
     font-weight: 1000;
     line-height: font(size);
-     text-transform: lowercase;
+    text-transform: uppercase;
     color: color(text);
     
     @include respond-to(767px) {

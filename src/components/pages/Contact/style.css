@@ -1,117 +1,131 @@
 
 .contactPage {
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    font-family: 'Major Mono Display';
-    text-transform: lowercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	font-family: 'Major Mono Display';
+	text-transform: lowercase;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow-x:hidden;
+}
 
-  .contactContent{
-    margin: 5vh;
-    width: 80vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: xx-large;
-  }
+.contactContent{
+	margin: 5vh;
+	width: 80vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: x-large;
 
-  .upper {
-    text-transform: uppercase;
-    font-weight: bolder;
-    display: inline-block;
-  }
+}
 
-  :root {
+.upper {
+	text-transform: uppercase;
+	font-weight: bolder;
+	display: inline-block;
+}
+
+#email {
+	display: none;
+	position: absolute;
+}
+
+#copyBtn {
+	display: none;
+}
+
+.copy {
+	margin-top: 10vh;
+}
+
+.resume {
+	margin-top: 10vh;
+}
+
+.btnsWrap {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+}
+
+.contactBtn{
+	outline:none;
+	text-transform: lowercase;
+	white-space: nowrap;
+	margin: 1vw;
+}
+
+
+
+
+
+/* ------------------- */
+:root {
 	--animation-delay: 0;
-	--duration: 17000ms;
+	--duration: 2000ms;
 	--iterations: 1;
 }
 
-.reveal,
-.reveal::after {
-	        animation-delay: 0;
-	        animation-delay: var(--animation-delay, 2s);
-	        animation-iteration-count: 1;
-	        animation-iteration-count: var(--iterations, 1);
-	        animation-duration: 800ms;
-	        animation-duration: var(--duration, 800ms);
-	        animation-fill-mode: both;
-	        animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+.reveal, .reveal::after {
+	animation-delay: 0;
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: 1;
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: 800ms;
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
  
 .reveal {
 	position: relative;
-	font-size: 3vw;
+	font-size: x-large;
 	animation-name: text;
 	color: #111;
 	white-space: nowrap;
 	cursor: default;
 	text-transform: lowercase;
-    max-width: 70vw;
-    margin: 2vh;
-    /* use for the fade out when it close to the end */
-    /* opacity: 1;
-   transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out; */
-    /* you'll need to transition it to 0 somewhere */
-   /* opacity: 0; */
+	
 }
  
 .reveal::after {
-		content: "";
-		position: absolute;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient( rgb(179,221,242), rgb(239,169,144));
-	        transform: scaleX(0);
-	        transform-origin: 0 50%;
-		pointer-events: none;
-            animation-name: revealer;
-            
+	content: "";
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	pointer-events: none;
+	animation-name: revealer;
 	}
- 
- 
  
 @keyframes text {
-	from {
-	        clip-path: inset(0 100% 0 0);
-	}
-	to {
-	        clip-path: inset(0 0 0 0);
-	}
+
+	from {clip-path: inset(0 100% 0 0);}
+
+	to {clip-path: inset(0 0 0 0);}
 }
- 
- 
  
  
 @keyframes revealer {
 	
-	0%, 50% {
-	        transform-origin: 0 50%;
-	}
-	
-	60%, 100% {
-	        transform-origin: 100% 50%;		
-	}
+	0%, 50% {transform-origin: 0 50%;}
+
+	60%, 100% {transform-origin: 100% 50%;}
  
-	
-	60% {
-	        transform: scaleX(1);
-	}
-	
-	100% {
-	        transform: scaleX(0);
-	}
+	60% {transform: scaleX(1);}
+
+	100% {transform: scaleX(0);}
 }
-  /* scrolling letters style in scss file */
+
+
+
+  /* scrolling letters styles in scss file */

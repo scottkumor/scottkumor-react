@@ -5,6 +5,8 @@ import "./style.css"
 import Nav from "./../../Nav"
 import Jumper from '../../Jumper/Jumper'
 import DB from "../../../data/db.json"
+import animejs from 'animejs/lib/anime.es.js';
+import Anime, {anime} from 'react-anime';
 
 class Portfolio extends Component {
 
