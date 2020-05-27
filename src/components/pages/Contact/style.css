@@ -17,10 +17,14 @@
 	margin: 5vh;
 	width: 80vw;
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: center;
 	font-size: x-large;
 
+}
+
+.pBlock{
+	padding: 2vw;
 }
 
 .upper {
@@ -29,103 +33,9 @@
 	display: inline-block;
 }
 
-#email {
-	display: none;
-	position: absolute;
-}
-
-#copyBtn {
-	display: none;
-}
-
-.copy {
-	margin-top: 10vh;
-}
 
 .resume {
 	margin-top: 10vh;
 }
-
-.btnsWrap {
-	display: flex;
-	align-items: baseline;
-	justify-content: flex-start;
-}
-
-.contactBtn{
-	outline:none;
-	text-transform: lowercase;
-	white-space: nowrap;
-	margin: 1vw;
-}
-
-
-
-
-
-/* ------------------- */
-:root {
-	--animation-delay: 0;
-	--duration: 2000ms;
-	--iterations: 1;
-}
-
-.reveal, .reveal::after {
-	animation-delay: 0;
-	animation-delay: var(--animation-delay, 2s);
-	animation-iteration-count: 1;
-	animation-iteration-count: var(--iterations, 1);
-	animation-duration: 800ms;
-	animation-duration: var(--duration, 800ms);
-	animation-fill-mode: both;
-	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
-}
- 
-.reveal {
-	position: relative;
-	font-size: x-large;
-	animation-name: text;
-	color: #111;
-	white-space: nowrap;
-	cursor: default;
-	text-transform: lowercase;
-	
-}
- 
-.reveal::after {
-	content: "";
-	position: absolute;
-	z-index: 999;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #fff;
-	transform: scaleX(0);
-	transform-origin: 0 50%;
-	pointer-events: none;
-	animation-name: revealer;
-	}
- 
-@keyframes text {
-
-	from {clip-path: inset(0 100% 0 0);}
-
-	to {clip-path: inset(0 0 0 0);}
-}
- 
- 
-@keyframes revealer {
-	
-	0%, 50% {transform-origin: 0 50%;}
-
-	60%, 100% {transform-origin: 100% 50%;}
- 
-	60% {transform: scaleX(1);}
-
-	100% {transform: scaleX(0);}
-}
-
-
 
   /* scrolling letters styles in scss file */
