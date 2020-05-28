@@ -13,10 +13,10 @@
      left: 0px;
      background: rgba(0,0,0,.9);
      z-index: 99999;
-     transition: opacity 1s ease-in 0s;
+     transition: opacity 1s ease-in-out 0s;
      pointer-events: auto;
-     overflow-y: none;
-    
+     overflow-y: hidden;
+    height:100%
     
 
      
@@ -26,13 +26,18 @@
 	flex-direction: column;
 	justify-content: center;
     align-items: center;
-    
+	height: 100%;
+	position:absolute;
+	top: 0px;
+     right: 0px;
+     bottom: 0px;
+     left: 0px;
     
 }
 
 #email,#copied {
 	display: block;
-	margin: 1vw;
+	/* margin: 1vw; */
     font-size: x-large;
     font-family: 'Major Mono Display';
     padding: 1vw 10vw 1vw 10vw;
@@ -50,8 +55,13 @@
 
 .close {
     outline:none;
-    color:white;
-}
+	color:white;
+	position: fixed;
+	cursor: pointer;
+	z-index:9999;
+	top: 0px;
+	 right: 0px;
+	 padding: 5px 10px 1px 1px;}
 
 .close:hover {
     cursor: pointer;
@@ -59,7 +69,7 @@
 }
 
 /* ------------------- */
-/* :root {
+:root {
 	--animation-delay: 0;
 	--duration: 2000ms;
 	--iterations: 1;
@@ -119,4 +129,4 @@
 	60% {transform: scaleX(0);}
 
 	100% {transform: scaleX(0);}
-} */
+}

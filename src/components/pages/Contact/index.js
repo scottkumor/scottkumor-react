@@ -30,40 +30,7 @@ function Contact() {
         }
     }, []);
 
-    // function changeText() {
-    //     var btn = document.getElementById('copyBtn');
-    //     btn.innerHTML = "Copied";
-    // }
-
-    function copyEmail() {
-
-        var str = document.getElementById("email").innerHTML;
-        function listener(e) {
-            e.clipboardData.setData("text/html", str);
-            e.clipboardData.setData("text/plain", str);
-            e.preventDefault();
-        }
-        document.addEventListener("copy", listener);
-        document.execCommand("copy");
-        document.removeEventListener("copy", listener);
-
-        // changeText();
-    }
-
-    function scrollToggle() {
-        var email = document.getElementById("email");
-        var copied = document.getElementById("copied");
-        var revBtn = document.getElementById("revBtn");
-        var copytBtn = document.getElementById("copyBtn");
-        email.style.display = "block";
-        copied.style.display = "block";
-        email.className = "reveal";
-        copied.className = "reveal";
-        revBtn.style.display = "none"
-        copytBtn.style.display = "block"
-        copyEmail();
-    }
-
+    
     function sendEmail() {
         window.location = "mailto:scottkumor1212@gmail.com";
     }
@@ -97,11 +64,10 @@ function Contact() {
                     className="pBlock"
                     animateIn='fadeInLeft'
                     animateOnce={true}
-                    duration={10}
+                    duration={5}
                 >
-                    <div>Click <div className="upper">email me </div> to generate a new message
-                    to me using your device's default mail app. Click <div className="upper">copy email </div>
-                    to to copy to your keyboard. I typically reply within 1-2 business days.
+                    <div>Click <div className="upper">email me </div> to message me using your device's 
+                    default mail app. <div className="upper"> copy email </div> copies my email address.
                     </div>
 
 
@@ -112,10 +78,10 @@ function Contact() {
                     className="pBlock"
                     animateIn='fadeInRight'
                     animateOnce={true}
-                    duration={10}
+                    duration={5}
                 >
-                    <div>click <div className="upper">resume pdf </div> to generate PDF of my
-                    resume in a new tab. click <div className="upper">download pdf </div>to save it to your device.
+                    <div>click <div className="upper"> resume pdf </div> to generate PDF of my
+                    resume in a new tab. click <div className="upper"> download pdf </div> to save it to your device.
                     </div>
 
                 </ScrollAnimation>
@@ -125,7 +91,7 @@ function Contact() {
             <ScrollAnimation
                 className="btnFlex"
                 animateIn="fadeInDown"
-                delay={1000}
+                delay={4000}
 
             >
                 <div className="btnsWrap">
@@ -135,23 +101,8 @@ function Contact() {
                         className="contactBtn"
                     >
                         Email Me
-                        </button>
+                    </button>
 
-                    <button
-                        id="copyBtn"
-                        onClick={copyEmail}
-                        className="contactBtn"
-                    >
-                        Copy Email
-                        </button>
-
-                    {/* <button
-                        id="revBtn"
-                        onClick={scrollToggle}
-                        className="contactBtn"
-                    >
-                        Copy Email 
-                    </button> */}
                     <Modal />
 
                     <FontAwesomeIcon
@@ -180,14 +131,11 @@ function Contact() {
 
             </ScrollAnimation>
 
-            
-
-            
-
-
-            {/* <Nav /> */}
+            <Nav />
         </div>
     )
 }
 
 export default Contact;
+
+

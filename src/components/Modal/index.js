@@ -1,10 +1,9 @@
 
 import React from 'react';
-import ScrollAnimation from "react-animate-on-scroll"
 import Modal from 'simple-react-modal'
 import './style.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 export default class ContactModal extends React.Component {
 
@@ -24,14 +23,27 @@ export default class ContactModal extends React.Component {
 
     render() {
 
+        function copyEmail() {
+            
+            var str = "scott.kumor1212@gmail.com"
+            console.log(str)
+            function listener(e) {
+                e.clipboardData.setData("text/html", str);
+                e.clipboardData.setData("text/plain", str);
+                e.preventDefault();
+            }
+            document.addEventListener("copy", listener);
+            document.execCommand("copy");
+            document.removeEventListener("copy", listener);
         
-       
+    }
+
         return (
-            <div className="">
+            <div className="modalWrap" onClick={copyEmail}>
                 <button className="contactBtn" onClick={this.show.bind(this)}>Copy Email</button>
                 <Modal
                     className="modal" //this will completely overwrite the default css completely
-                     style={{}} //overwrites the default background
+                    // style={{}} //overwrites the default background
                     // containerStyle={{ background: 'blue' }} //changes styling on the inner content area
                     //containerClassName="" change the class on the containing div
                     show={this.state.show}
@@ -39,32 +51,30 @@ export default class ContactModal extends React.Component {
                     transitionSpeed={500}
                 >
 
-                    {/* <button className="close" onClose="" >X</button> */}
                     <FontAwesomeIcon
-                        icon={faPlus}
+                        icon={faTimesCircle}
                         size='2x'
-                        style={{ padding: "1vw", transform: 'rotate(45deg)' }}
                         onClick={this.close.bind(this)}
                         className="close"
                     />
-                    <ScrollAnimation
+                    <div
                         className="emailWrap"
-                        animateIn="fadeIn"
-                        initiallyVisible={false}
                     >
                         <div
                             id="email"
                             className="reveal"
                         >
                             scott.kumor1212@gmail.com
-                    </div>
+                        </div>
                         <div
                             id="copied"
+                            className="reveal"
+
                         >
                             Copied to Clipboard!
                     </div>
 
-                    </ScrollAnimation>
+                    </div>
 
                 </Modal>
             </div>
