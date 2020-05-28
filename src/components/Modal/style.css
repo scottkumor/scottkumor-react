@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+.modal {
+    opacity: 1;
+     display: block;
+     visibility: visible;
+     position: fixed;
+     font-family: Arial, Helvetica, sans-serif;
+     top: 0px;
+     right: 0px;
+     bottom: 0px;
+     left: 0px;
+     background: rgba(0,0,0,.9);
+     z-index: 99999;
+     transition: opacity 1s ease-in 0s;
+     pointer-events: auto;
+     overflow-y: none;
+    
+    
+
+     
+}
+.emailWrap{
+    display:flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+    
+    
+}
+
+#email,#copied {
+	display: block;
+	margin: 1vw;
+    font-size: x-large;
+    font-family: 'Major Mono Display';
+    padding: 1vw 10vw 1vw 10vw;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(90deg, transparent 0%, rgb(0,0,0) 10%, rgb(0,0,0) 90%, transparent 100%); 
+
+
+}
+
+#copied {
+    text-transform: uppercase;
+    
+}
+
+.close {
+    outline:none;
+    color:white;
+}
+
+.close:hover {
+    cursor: pointer;
+
+}
+
+/* ------------------- */
+/* :root {
+	--animation-delay: 0;
+	--duration: 2000ms;
+	--iterations: 1;
+}
+
+.reveal, .reveal::after {
+	animation-delay: 0;
+	animation-delay: var(--animation-delay, 2s);
+	animation-iteration-count: 1;
+	animation-iteration-count: var(--iterations, 1);
+	animation-duration: 800ms;
+	animation-duration: var(--duration, 800ms);
+	animation-fill-mode: both;
+	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+ 
+.reveal {
+	position: relative;
+	font-size: inherit;
+	animation-name: text;
+	color: #111;
+	white-space: nowrap;
+	cursor: default;
+	text-transform: lowercase;
+	
+}
+ 
+.reveal::after {
+	content: " ";
+	position: absolute;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: 0 50%;
+	pointer-events: none;
+	animation-name: revealer;
+	}
+ 
+@keyframes text {
+
+	from {clip-path: inset(0 100% 0 0);}
+
+	to {clip-path: inset(0 0 0 0);}
+}
+ 
+ 
+@keyframes revealer {
+	
+	0%, 50% {transform-origin: 0 50%;}
+
+	60%, 100% {transform-origin: 100% 50%;}
+ 
+	60% {transform: scaleX(0);}
+
+	100% {transform: scaleX(0);}
+} */

@@ -34,8 +34,96 @@
 }
 
 
+
+#copyBtn {
+	display: none;
+}
+
+.copy {
+	margin-top: 10vh;
+}
+
 .resume {
 	margin-top: 10vh;
 }
+
+.btnFlex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4vw;
+	background: linear-gradient(90deg, transparent 0%, rgb(255,255,255) 10%, rgb(255,255,255) 90%, transparent 100%); 
+
+}
+
+.btnsWrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+
+
+.contactBtn {
+	padding:2vw;
+	text-decoration: none;
+	color: black;
+	transition: all 0.3s;
+	position: relative;
+	font-family: inherit;
+	font-size: large;
+	outline:none;
+	text-transform: lowercase;
+	white-space: nowrap;
+	background-color: transparent;
+	border: none;
+	cursor:pointer;
+
+  }
+  
+  
+  .contactBtn::before {
+	content: ' ';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 3px;
+	border-bottom-width: 3px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(0,0,0,0.5);
+	border-bottom-color: rgba(0,0,0,0.5);
+	transform: scale(0.3, 1.1);
+  }
+  
+  .contactBtn:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+  }
+  .contactBtn::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: transparent;
+  
+  }
+  .contactBtn:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+
+  }
+
+
 
   /* scrolling letters styles in scss file */

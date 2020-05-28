@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import DB from "../../../data/letters.json";
 import Nav from "./../../Nav";
-import Resizer from "./../../Resizer"
+import Modal from "./../../Modal/index.js";
 import ScrollAnimation from 'react-animate-on-scroll';
 // import FadeIn from "react-fade-in"
 import "./style.css";
 import "./letters.scss";
 import desktopImage from './../../../assets/images/HomeIMG-Brad-Knight-Unsplash.jpg';
 import mobileImage from './../../../assets/images/sunset.jpg';
-
+import pdf from "../../../assets/files/ScottKumorResume.pdf";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons';
 
 
 function Contact() {
@@ -28,7 +30,47 @@ function Contact() {
         }
     }, []);
 
-    
+    // function changeText() {
+    //     var btn = document.getElementById('copyBtn');
+    //     btn.innerHTML = "Copied";
+    // }
+
+    function copyEmail() {
+
+        var str = document.getElementById("email").innerHTML;
+        function listener(e) {
+            e.clipboardData.setData("text/html", str);
+            e.clipboardData.setData("text/plain", str);
+            e.preventDefault();
+        }
+        document.addEventListener("copy", listener);
+        document.execCommand("copy");
+        document.removeEventListener("copy", listener);
+
+        // changeText();
+    }
+
+    function scrollToggle() {
+        var email = document.getElementById("email");
+        var copied = document.getElementById("copied");
+        var revBtn = document.getElementById("revBtn");
+        var copytBtn = document.getElementById("copyBtn");
+        email.style.display = "block";
+        copied.style.display = "block";
+        email.className = "reveal";
+        copied.className = "reveal";
+        revBtn.style.display = "none"
+        copytBtn.style.display = "block"
+        copyEmail();
+    }
+
+    function sendEmail() {
+        window.location = "mailto:scottkumor1212@gmail.com";
+    }
+
+    function openResume() {
+        window.open(pdf);
+    }
 
     return (
         <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${imageUrl})` }}>
@@ -78,9 +120,73 @@ function Contact() {
 
                 </ScrollAnimation>
             </div>
-            <Resizer />
-        <Nav />
-        </div >
+
+
+            <ScrollAnimation
+                className="btnFlex"
+                animateIn="fadeInDown"
+                delay={1000}
+
+            >
+                <div className="btnsWrap">
+
+                    <button
+                        onClick={sendEmail}
+                        className="contactBtn"
+                    >
+                        Email Me
+                        </button>
+
+                    <button
+                        id="copyBtn"
+                        onClick={copyEmail}
+                        className="contactBtn"
+                    >
+                        Copy Email
+                        </button>
+
+                    {/* <button
+                        id="revBtn"
+                        onClick={scrollToggle}
+                        className="contactBtn"
+                    >
+                        Copy Email 
+                    </button> */}
+                    <Modal />
+
+                    <FontAwesomeIcon
+                        icon={faGripLinesVertical}
+                        size="4x"
+                        style={{ padding: "1vw" }}
+                    />
+
+                    <button
+                        id="pdfBtn"
+                        onClick={openResume}
+                        className="contactBtn"
+                    >
+                        Open PDF
+                        </button>
+
+                    <a
+                        id="dlBtn"
+                        className="contactBtn"
+                        download href={pdf}
+                    >
+                        Download PDF
+                        </a>
+                </div>
+                
+
+            </ScrollAnimation>
+
+            
+
+            
+
+
+            {/* <Nav /> */}
+        </div>
     )
 }
 
