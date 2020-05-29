@@ -9,7 +9,7 @@ import Contact from "./components/pages/Contact/index.js";
 
 
 function App() {
-    
+
 return (
       
       <Switch>

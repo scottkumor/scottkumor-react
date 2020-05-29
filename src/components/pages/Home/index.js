@@ -26,6 +26,9 @@ const Home = () => {
         }
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     
     
     return (
@@ -49,7 +52,6 @@ const Home = () => {
                     <ScrollAnimation 
                         delay={4500}
                         animateIn="bounce"
-                        animateOut="bounce"
                         duration={3}
                         animateOnce={true}
                     >
@@ -64,19 +66,22 @@ const Home = () => {
                     animateIn='fadeInDown'
                     animateOut='fadeOutDown'
                     initiallyVisible={false}
-                    duration={3}
+                    animateOnce={true}
+                    duration={2}
+                    offset={300}
                 >
-                        Welcome to my personal website. The buttons in the navigation bar will take you to various parts of the site -
+                        <div className="inside">Welcome to my personal website. The buttons in the navigation bar will take you to various parts of the site -
                         'About' will direct you my background information. 'Portfolio' will let you view
                         all my past and current projects. 'Contact' will lead you to the
                         the best ways to reach out to me should you want to, as well as the option to generate a PDF of my Résumé.
-                    
+                        </div> 
                 </ScrollAnimation>
                 
                 <ScrollAnimation 
                     className="btnWrap"
                     animateIn='fadeInDown'
                     animateOut='fadeOutDown'
+                    animateOnce={true}
                 >
                     <Link className="btn"to="/about">About</Link>
                     <Link className="btn"to="/portfolio">Portfolio</Link>

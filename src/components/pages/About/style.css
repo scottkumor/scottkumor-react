@@ -1,11 +1,13 @@
-
+.main{
+  font-family: 'Jost', sans-serif
+}
 
 .jbo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255,255,255,.95);
     width: 50%;
     height: 25%;
     margin:10vh;
@@ -27,13 +29,14 @@
 
 .tagline{
   font-size: 4vw;  
-    font-weight: bold;
-    color: transparent;
-background: #666666;
--webkit-background-clip: text;
--moz-background-clip: text;
-background-clip: text;
-text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  font-weight: bold;
+  font-family: 'Inknut Antiqua';
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
 
 .subTagline{

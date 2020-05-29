@@ -30,6 +30,9 @@ function Contact() {
         }
     }, []);
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     
     function sendEmail() {
         window.location = "mailto:scottkumor1212@gmail.com";
