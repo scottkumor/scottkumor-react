@@ -11,12 +11,6 @@ const About = () => {
 
     return (
         <>
-            {/* 
-            HEY YOU. see that scroll animation? do it for ever tagline. 
-            Make two boxes, flex them in a row. Keep these words to always display or
-            display first:
-                Dream, Value, Gain
-            */}
             <Nav />
             <main className="main">
 
@@ -29,14 +23,27 @@ const About = () => {
 
                 <section className="cd-section section--text">
 
-                    <ScrollAnimation 
-                        animateIn="fadeInDown" 
-                        className="tagline"
-                        delay={2000}
-                    >
-                        If You Can Dream It, I Can Do It.
-                    </ScrollAnimation>
+                     <div className="tagWrap">
+                        <ScrollAnimation 
+                            animateIn="fadeInDown" 
+                            animateOnce={true} 
+                            className="tagline"
+                            delay={2000}
+                        >If You Can</ScrollAnimation>
+                        <ScrollAnimation 
+                            animateIn="fadeIn" 
+                            animateOnce={true} 
+                            className="tagline fixer"
+                            duration={6}
+                        >Dream</ScrollAnimation>
+                        <ScrollAnimation 
+                            animateIn="fadeInDown"
+                            animateOnce={true}  
+                            className="tagline"
+                            delay={2000}
+                        >It, I Can Do It.</ScrollAnimation>
 
+                    </div>
                     <p className="p">I'm a Web Developer based in the Greater Chicago area. Currently I am
                     looking for positions working on the front end - HTML, CSS, JavaScript,
                     and React are the tools I'm most comfortable working with, though I am always
@@ -52,7 +59,14 @@ const About = () => {
                     and exhibit my abilities through my passion
                     </p>
 
-                    <p className="tagline">for all to see.</p>
+                    <ScrollAnimation 
+                        animateIn="fadeInDown" 
+                        offset={300}
+                        animateOnce={true} 
+                        className="tagline"
+                    >
+                        for all to see.
+                    </ScrollAnimation>
 
                 </section>
 
@@ -65,8 +79,35 @@ const About = () => {
 
                 <section className="cd-section section--text">
 
-                    <p className="tagline">“Visibility without Value is Vanity”</p>
-                    <p className="subTagline"> ― Bernard Kelvin Clive</p>
+                    <div className="tagWrap">
+                        <ScrollAnimation 
+                            animateIn="fadeInDown" 
+                            animateOnce={true} 
+                            className="tagline"
+                            delay={2000}
+                        >“Visibility without</ScrollAnimation>
+                        <ScrollAnimation 
+                            animateIn="fadeIn" 
+                            animateOnce={true} 
+                            className="tagline fixer"
+                            duration={6}
+                        >Value</ScrollAnimation>
+                        <ScrollAnimation 
+                            animateIn="fadeInDown"
+                            animateOnce={true}  
+                            className="tagline"
+                            delay={2000}
+                        >is Vanity”</ScrollAnimation>
+                    </div>
+                    <ScrollAnimation 
+                        animateIn="fadeInDown"
+                        animateOnce={true}
+                        delay={3000}
+                        duration={4}
+                        className="subTagline"
+                    >
+                        ― Bernard Kelvin Clive
+                    </ScrollAnimation>
 
                     <p className="p">I earned a Bachelors of Business Administration in Information Systems from the
                     University of Cincinnati Lindner College of Business and a
@@ -81,8 +122,14 @@ const About = () => {
                     to fit in with what the user expects. That's where I come in - utilizing my practical business
                     knowledge and my ability to develop a page, I can use my skills to generate value</p>
 
-                    <p className="tagline">for you.</p>
-
+                    <ScrollAnimation 
+                        animateIn="fadeInDown" 
+                        offset={300}
+                        animateOnce={true} 
+                        className="tagline"
+                    >
+                        for you.
+                    </ScrollAnimation>
                 </section>
 
                 <section className="cd-section cd-section--bg-fixed">
@@ -94,7 +141,21 @@ const About = () => {
 
                 <section className="cd-section section--text">
 
-                    <p className="tagline">No Pain, No Gain.</p>
+                <div className="tagWrap">
+                        <ScrollAnimation 
+                            animateIn="fadeInDown" 
+                            animateOnce={true} 
+                            className="tagline"
+                            delay={2000}
+                        >No Pain, No</ScrollAnimation>
+                        <ScrollAnimation 
+                            animateIn="fadeIn" 
+                            animateOnce={true} 
+                            className="tagline fixer2"
+                            duration={6}
+                        >Gain.</ScrollAnimation>
+                        
+                    </div>
 
                     <p className="p"> In my free-time I enjoy playing music on my various instruments –
                     I play guitar, drums, bass, keyboard among other things. I am also a skier, snowboarder,
@@ -123,13 +184,19 @@ const About = () => {
                     line on the green - it is a constant battle with yourself and a collaborative effort with others that really make these
                 experiences special. It will be a feeling that I’ll be chasing, in my career or in in my life,</p>
 
-                    <p className="tagline">forever.</p>
+                <ScrollAnimation 
+                        animateIn="fadeInDown" 
+                        offset={300}
+                        animateOnce={true} 
+                        className="tagline"
+                    >
+                        forever.
+                    </ScrollAnimation>
 
                 </section>
 
                 <section className="cd-section cd-section--bg-fixed"></section>
-                <div className="footer">You've reached the end of the page - please enjoy this photo of the Chicago
-                skyline at dusk. Photo credit to u/612shooter on Reddit.</div>
+                <div className="footer">Photo credit to u/612shooter on Reddit.</div>
             </main>
         </>
     )
