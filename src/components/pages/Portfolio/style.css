@@ -12,6 +12,8 @@
   flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in-out;
+    height: inherit;
 }
 
 .cardImg {
@@ -61,6 +63,8 @@
   background-color: white;
 } */
 
+
+
 .carousel-root {
 margin-top: 20vh;
 font-family: 'Jost', sans-serif !important;
@@ -104,13 +108,13 @@ max-width: 55vw;
 
 .svg{
   color:white;
-  background-color: rgb(138, 137, 137);
+  background-color: transparent;
   padding: 10%;
-  border-radius: 10%;
+  border-radius: 0;
   transition: all .5s ease-in-out;
 }
 
-.carousel:hover .svg {
+.cardWrap:hover .svg {
   background-color: black;
 }
 
@@ -119,6 +123,7 @@ max-width: 55vw;
   width: inherit;
   position: relative;
   font-size: inherit;
+  border-radius: 0;
   bottom:0;
   left:0;
   right:0;
@@ -126,6 +131,47 @@ max-width: 55vw;
   margin:0;
   margin-top: 1vh;
 }
+
+.infoCard {
+  opacity: 0;
+  color: white;
+  background-color: black;
+  overflow:hidden;
+  text-align:center;
+  padding:2%;
+  max-width: 80%;
+  transform: scaleY(0);  
+  transition: all 0.5s ease-in-out;
+}
+
+.cardWrap:hover .infoCard{
+  opacity: 1;
+  height: auto;
+
+  transform: scaleY(1);  
+  transition: all 0.5s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

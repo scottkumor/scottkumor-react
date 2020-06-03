@@ -7,7 +7,7 @@
         "alt": "Password Generator",
         "title": "Password Generator",
         "credit": "Photo by Jason Dent on Unsplash",
-        "description": "",
+        "description": "A lightweight random character generator for use when you need a new password.",
         "icon":"key"
     },
     {
@@ -18,7 +18,7 @@
         "alt": "Day Planner",
         "title": "Day Planner",
         "credit": "Photo by Carolyn V on Unsplash",
-        "description": "",
+        "description": "A useful tool to help you plan your day.",
         "icon":"list-alt"
     },
     {
@@ -29,7 +29,7 @@
         "alt": "Weather Dashboard",
         "title": "Weather Dashboard",
         "credit": "Photo by John Macdonald on Unsplash",
-        "description": "",
+        "description": "Find out the weather by typing in your city.",
         "icon":"cloud-sun-rain"
     },
     {
@@ -40,7 +40,7 @@
         "alt": "Spotlight",
         "title": "Spotlight",
         "credit": "Image by Izzy Edson",
-        "description": "",
+        "description": "Collaboration: Spotlight is a Streaming Service Search Engine. Find out here where you can stream your favorite shows.",
         "icon":"search"
     },
     {
@@ -51,7 +51,7 @@
         "alt": "Sovest",
         "title": "Sovest",
         "credit": "Image by Izzy Edson",
-        "description": "",
+        "description": "A women-facing Investment tool focusing on Instagram Influencers and their effect on the market.",
         "icon":"chart-area"
     },
     {
@@ -62,7 +62,7 @@
         "alt": "uCTAnon",
         "title": "uCTAnon",
         "credit": "Image by Scott Kumor",
-        "description": "",
+        "description": "Collaboration: An anonymous, user-controlled social media experience designed to help users navigate the wild west of Chicago's public rail system.",
         "icon":"subway"
     }
 ]

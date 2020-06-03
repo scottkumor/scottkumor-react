@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,11 +16,12 @@ function Jumper(props) {
 
     return (
         <div className="cardWrap">
-            <a className="linkWrap" href={props.link}>
+            <a className="linkWrap" href={props.link} target="_blank">
                 {/* <img className="cardImg" alt={props.alt} title={props.title} src={props.image} /> */}
                 <FontAwesomeIcon className="svg" size="9x" icon={props.icon}></FontAwesomeIcon>
-                <div className="legend">{props.name}</div>   
+                <div className="legend">{props.name}</div>
             </a>
+            <div className="infoCard">{props.description}</div>
         </div>
     )
 };

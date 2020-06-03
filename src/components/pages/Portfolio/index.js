@@ -47,6 +47,7 @@ export default class Portfolio extends Component {
                                 description={item.description}
                                 icon={item.icon}
                             />
+                            
                         ))}
 
 
