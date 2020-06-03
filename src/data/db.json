@@ -7,7 +7,8 @@
         "alt": "Password Generator",
         "title": "Password Generator",
         "credit": "Photo by Jason Dent on Unsplash",
-        "description": ""
+        "description": "",
+        "icon":"key"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "alt": "Day Planner",
         "title": "Day Planner",
         "credit": "Photo by Carolyn V on Unsplash",
-        "description": ""
+        "description": "",
+        "icon":"list-alt"
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "alt": "Weather Dashboard",
         "title": "Weather Dashboard",
         "credit": "Photo by John Macdonald on Unsplash",
-        "description": ""
+        "description": "",
+        "icon":"cloud-sun-rain"
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@
         "alt": "Spotlight",
         "title": "Spotlight",
         "credit": "Image by Izzy Edson",
-        "description": ""
+        "description": "",
+        "icon":"search"
     },
     {
         "id": 5,
@@ -47,7 +51,8 @@
         "alt": "Sovest",
         "title": "Sovest",
         "credit": "Image by Izzy Edson",
-        "description": ""
+        "description": "",
+        "icon":"chart-area"
     },
     {
         "id": 6,
@@ -57,6 +62,7 @@
         "alt": "uCTAnon",
         "title": "uCTAnon",
         "credit": "Image by Scott Kumor",
-        "description": ""
+        "description": "",
+        "icon":"subway"
     }
 ]

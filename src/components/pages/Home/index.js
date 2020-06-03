@@ -63,8 +63,8 @@ const Home = () => {
                 </FadeIn>
 
                 <ScrollAnimation className="p2"
-                    animateIn='fadeInDown'
-                    animateOut='fadeOutDown'
+                    animateIn='fadeInUp'
+                    animateOut='fadeOutUp'
                     initiallyVisible={false}
                     animateOnce={true}
                     duration={2}

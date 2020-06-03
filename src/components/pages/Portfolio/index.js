@@ -3,26 +3,29 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "./style.css"
 import Nav from "./../../Nav"
-import Jumper from '../../Jumper/Jumper'
+import Jumper from '../../Jumper'
 import DB from "../../../data/db.json"
-import animejs from 'animejs/lib/anime.es.js';
-import Anime, {anime} from 'react-anime';
 
-class Portfolio extends Component {
+
+
+export default class Portfolio extends Component {
 
     render() {
         return (
             <>
                 <Nav />
+                <div className="bg"></div>
+                <div className="bg bg2"></div>
+                <div className="bg bg3"></div>
+
                 <div className="portWrap">
 
-                    <div className="linkWrap">
-                        Here you will find links too all the projects I have worked on - some personally and some in
-                    collaboration. <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
-                            Here</a> is the link to my Github page, where you preruse my code at your leisure.
-                    Should you have any feedback, drop me a line on the <a className="gitLink" href="/contact">Contact</a> page.
-                    Note - all projects will open in a new tab so this page can remain how you left it.
-                </div>
+                    {/* <div className="linkWrap">
+                        <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
+                            My Github
+                        </a>
+                    </div> 
+                    */}
 
                     <Carousel
                         showThumbs={false}
@@ -42,6 +45,7 @@ class Portfolio extends Component {
                                 title={item.title}
                                 credit={item.credit}
                                 description={item.description}
+                                icon={item.icon}
                             />
                         ))}
 
@@ -54,7 +58,7 @@ class Portfolio extends Component {
     }
 }
 
-export default Portfolio;
+
 
 
 /* <div className=""> Photo by Carolyn V on Unsplash
