@@ -6,8 +6,6 @@ import Nav from "./../../Nav"
 import Jumper from '../../Jumper'
 import DB from "../../../data/db.json"
 
-
-
 export default class Portfolio extends Component {
 
     render() {

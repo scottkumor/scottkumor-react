@@ -3,7 +3,6 @@ import DB from "../../../data/letters.json";
 import Nav from "./../../Nav";
 import Modal from "./../../Modal/index.js";
 import ScrollAnimation from 'react-animate-on-scroll';
-// import FadeIn from "react-fade-in"
 import "./style.css";
 import "./letters.scss";
 import desktopImage from './../../../assets/images/HomeIMG-Brad-Knight-Unsplash.jpg';
