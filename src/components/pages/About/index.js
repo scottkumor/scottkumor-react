@@ -117,7 +117,7 @@ const About = () => {
                     but to the logistics and business processes needed to devolep a commercial website.</p>
 
                     <p className="p"> Its not just about creating something that looks good - its about generating value for
-                    the product or service you are showcasing for auser to interact with. In other words,
+                    the product or service you are showcasing for a user to interact with. In other words,
                     the web is the intermediary between the consumer and the business, and needs to be tailored
                     to fit in with what the user expects. That's where I come in - utilizing my practical business
                     knowledge and my ability to develop a page, I can use my skills to generate value</p>
@@ -168,7 +168,7 @@ const About = () => {
                     <p className="p">From a young age I always tried to expand my horizons and learn about the world as much as possible.
                     I became a Jack of All Trades while slowly mastering the ones that I felt were worth it. Many of my endeavors led to
                     failures and shortcomings – I quickly had to adapt to learn how to manage my time and enjoyment so I can best utilize
-                    my time. OFten times it wasn't easy - there was a lot of pain and second-guessing along the way. It was hard to let
+                    my time. Often times it wasn't easy - there was a lot of pain and second-guessing along the way. It was hard to let
                     go of things simply because of the value I saw in it or the outlook it gave me. Being able to give it all up for my
                 own good is a hard skill to master.</p>
 

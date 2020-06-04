@@ -1,7 +1,4 @@
-
-
 import React, { Component } from 'react';
-// import { CSSTransition } from "react-transition-group";
 import "./style.css";
 import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

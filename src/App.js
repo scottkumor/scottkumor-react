@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home/index.js";
 import About from "./components/pages/About/index.js";
@@ -10,8 +10,8 @@ import Contact from "./components/pages/Contact/index.js";
 
 function App() {
 
-return (
-      
+  return (
+    <BrowserRouter>
       <Switch>
         <Route exact path="/about">
           <About />
@@ -26,6 +26,7 @@ return (
           <Home />
         </Route>
       </Switch>
+    </BrowserRouter>
   );
 }
 
