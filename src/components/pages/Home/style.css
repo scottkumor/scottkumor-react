@@ -1,13 +1,12 @@
 
 
+
     
 .homePage {
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  font-family: 'Inknut Antiqua';
-
+  height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 
@@ -16,51 +15,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+ 
 }
 
+.title {
+  margin-bottom: 20vh;
+}
 .p1 {
   font-size: 12vw;
   white-space: nowrap;  
   font-weight: bold;
-  margin-top: 15vh;
-  margin: 1vw;
   max-width:90vw;
   color: transparent;
-background: #666666;
--webkit-background-clip: text;
--moz-background-clip: text;
-background-clip: text;
-text-shadow: 0px 8px 7px rgba(255,255,255,0.5);
+  background: #4477c4d0;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 1px 4px 4px rgba(255,255,255,0.5);
+  font-family: 'Inknut Antiqua';
+
 
 }
 
 .p2 {
-  margin-top: 10vh;
-  font-size: 2vw;
-  background: radial-gradient(rgba(255,255,255,.9) 60%, transparent 70%);  
+  font-size: 2.5vw;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.9) 10%, rgba(255,255,255,.9) 90%, transparent 100%); 
   max-width: 60vw;
   text-align: center;
-  padding: 8vw;
-  overflow: visible;
-  border-radius: 50%;
-}
-
-
-
-.btnWrap{
-  margin: 10vh;
-  margin-top: 15vh;
-  margin-bottom: 20vh;
-  font-size: 2vw;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.9) 10%, rgba(255,255,255,.9) 90%, transparent 100%); 
-  width: 60vw;
-  text-align: center;
-  padding: 2vw;
-  overflow: visible;
+  padding: 0 5vw;
+  font-family: 'Inknut Antiqua';
   display:flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction:row;
+
 }
+
 
 .btn {
   padding:2vw;
@@ -85,8 +74,8 @@ text-shadow: 0px 8px 7px rgba(255,255,255,0.5);
   border-bottom-width: 3px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: rgba(0,0,0,0.5);
-  border-bottom-color: rgba(0,0,0,0.5);
+  border-top-color: rgba(255,255,255);
+  border-bottom-color: rgba(255,255,255);
   transform: scale(0.3, 1.1);
 }
 
@@ -112,24 +101,50 @@ text-shadow: 0px 8px 7px rgba(255,255,255,0.5);
   transform: scale(0.1, 1);
   
 }
+
+.footer{
+  color:white;
+  font-size: .7vw;
+  background-color: transparent;
+  text-align: center;
+  bottom:0;
+  position: absolute;
+  width: 100%;
+  font-family: 'Inknut Antiqua';
+}
+
+
 /* mobile  overrides */
 @media (max-width: 768px) {
 
-  
+  .homePage {
+    width: 100vw;
+  }
+
+  .title {
+    max-width: 90vw;
+    margin-bottom: 30vh;
+  }
+
+
   .p1 {
     text-align: center;
     line-height: 100px; 
-    white-space: normal;  
-
+    white-space: normal; 
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 8px 7px rgba(255,255,255,0.5);
+    
   }
 
   .p2{
-    margin-top:30vh;
-    padding: 15vw;
-    font-size: 1.5vh;  
+    padding: 5vw;
+    font-size: 2.5vh;  
     background: rgb(255,255,255);
     background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.8) 2%, rgba(255,255,255,.8) 98%, transparent 100%); 
-    
+    flex-direction:column;
 
 }
 
