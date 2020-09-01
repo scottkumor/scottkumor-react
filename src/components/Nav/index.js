@@ -14,7 +14,7 @@ export default class Nav extends Component {
 
   render() {
     const links = [
-      
+
       {
         link: "/about",
         text: "About"
@@ -31,42 +31,40 @@ export default class Nav extends Component {
 
 
     return (
-
       <div className="navBar">
 
-        <Link to="/" className="logo">
-          <FontAwesomeIcon className="logoIcon" icon={faArrowLeft} />
-          <div className="logoText"> Scott Kumor </div> 
-          <FontAwesomeIcon className="logoIcon2" icon={faHome} />
-        </Link>
+        <div className="navMain">
+          <Link to="/" className="logo">
+            <FontAwesomeIcon className="logoIcon" icon={faArrowLeft} />
+            <div className="logoText"> Scott Kumor </div>
+            <FontAwesomeIcon className="logoIcon2" icon={faHome} />
+          </Link>
 
-        <div className="headWrap">          
           <FontAwesomeIcon
             id="toggle"
-            icon={faPlus} 
-            className={this.state.toggle ? "toggled " : "toggle "} 
+            icon={faPlus}
+            className={this.state.toggle ? "toggled " : "toggle "}
             onClick={this.Toggle}
-            />
+          />
         </div>
 
         <div className={this.state.toggle ? "links show-nav" : "links hide-nav"}>
           {
             links.map((objLink, i) => {
               return (
-                <NavLink 
+                <NavLink
                   activeStyle={{
                     fontWeight: "bold",
                     color: "rgb(239,169,144)"
-                  }} 
-                  className="navLink" 
-                  key={i} 
+                  }}
+                  className="navLink"
+                  key={i}
                   to={objLink.link}>{objLink.text}
-                </NavLink>                
+                </NavLink>
               )
             })
           }
         </div>
-
       </div>
     );
   }
