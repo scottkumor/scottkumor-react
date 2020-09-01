@@ -42,8 +42,9 @@ function Contact() {
     }
 
     return (
-        <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${imageUrl})` }}>
 
+        <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${imageUrl})` }}>
+            <div className="">
             <ScrollAnimation
                 className="wrapper"
                 animateIn='fadeInDown'
@@ -57,38 +58,6 @@ function Contact() {
                     ))}
                 </div>
             </ScrollAnimation>
-
-            <div className="contactContent">
-
-
-                <ScrollAnimation
-                    id="copy"
-                    className="pBlock"
-                    animateIn='fadeInLeft'
-                    animateOnce={true}
-                    duration={5}
-                >
-                    <div>Click <div className="upper">email me </div> to message me using your device's 
-                    default mail app. <div className="upper"> copy email </div> copies my email address.
-                    </div>
-
-
-                </ScrollAnimation>
-
-                <ScrollAnimation
-                    id="resume"
-                    className="pBlock"
-                    animateIn='fadeInRight'
-                    animateOnce={true}
-                    duration={5}
-                >
-                    <div>click <div className="upper"> resume pdf </div> to generate PDF of my
-                    resume in a new tab. click <div className="upper"> download pdf </div> to save it to your device.
-                    </div>
-
-                </ScrollAnimation>
-            </div>
-
 
             <ScrollAnimation
                 className="btnFlex"
@@ -132,7 +101,7 @@ function Contact() {
                 
 
             </ScrollAnimation>
-
+            </div>
             <Nav />
         </div>
     )

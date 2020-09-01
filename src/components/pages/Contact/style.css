@@ -1,16 +1,16 @@
 
 .contactPage {
 	height: 100vh;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    overflow-y:hidden;
 	font-family: 'Major Mono Display';
 	text-transform: lowercase;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	overflow-x:hidden;
 }
 
 .contactContent{

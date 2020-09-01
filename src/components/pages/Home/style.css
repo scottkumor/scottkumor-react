@@ -7,26 +7,26 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+    overflow-y:hidden;
 }
 
 
 .contentWrap {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100vh;
- 
 }
 
 .title {
-  margin-bottom: 20vh;
+  white-space: wrap;
+  line-height: 15vw;
+  margin: 4vw;
 }
+
 .p1 {
   font-size: 12vw;
-  white-space: nowrap;  
   font-weight: bold;
-  max-width:90vw;
   color: transparent;
   background: #4477c4d0;
   -webkit-background-clip: text;
@@ -40,21 +40,24 @@
 
 .p2 {
   font-size: 2.5vw;
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.9) 10%, rgba(255,255,255,.9) 90%, transparent 100%); 
+  background: linear-gradient(90deg, transparent 0%, #9fc1f5d0
+  20%, #4477c4d0 90%, transparent 100%); 
   max-width: 60vw;
-  text-align: center;
-  padding: 0 5vw;
+  text-align: right;
+  padding: 2vh 7vw 2vh 12vh;
   font-family: 'Inknut Antiqua';
   display:flex;
-  flex-direction:row;
+  flex-direction:column;
+  margin: 4vw;
+
 
 }
 
 
 .btn {
-  padding:2vw;
+  padding:1vw;
   text-decoration: none;
-  color: black;
+  color: white;
   transition: all 0.3s;
   position: relative;
 }
@@ -102,17 +105,6 @@
   
 }
 
-.footer{
-  color:white;
-  font-size: .7vw;
-  background-color: transparent;
-  text-align: center;
-  bottom:0;
-  position: absolute;
-  width: 100%;
-  font-family: 'Inknut Antiqua';
-}
-
 
 /* mobile  overrides */
 @media (max-width: 768px) {
@@ -121,31 +113,45 @@
     width: 100vw;
   }
 
+  .contentWrap {
+    flex-direction: column;
+    padding-top:0;
+    height:100%;
+
+  }
+
   .title {
     max-width: 90vw;
-    margin-bottom: 30vh;
+    background-color:  rgba(255,255,255,.8);
   }
 
 
   .p1 {
     text-align: center;
-    line-height: 100px; 
-    white-space: normal; 
+    font-size: 20vw;
+    line-height: 100%;
     background: #666666;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
     text-shadow: 0px 8px 7px rgba(255,255,255,0.5);
     
+    
   }
 
   .p2{
     padding: 5vw;
+    margin-top: 30vh;
     font-size: 2.5vh;  
-    background: rgb(255,255,255);
     background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.8) 2%, rgba(255,255,255,.8) 98%, transparent 100%); 
     flex-direction:column;
+    text-align:center;
 
+
+}
+
+.btn{
+  color:black;
 }
 
 }

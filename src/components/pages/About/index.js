@@ -15,7 +15,7 @@ const About = () => {
             <main className="main">
 
                 <section className="cd-section cd-section--bg-fixed">
-                    <div className="jbo top">
+                    <div className="jbo">
                         <div className="h1"> About Me </div>
                         <div className="h2">A General Overview</div>
                     </div>
@@ -51,8 +51,7 @@ const About = () => {
                     I have a good eye for design and the techincal skill to translate my ideas onto the page.
                     </p>
 
-                    <p className="p">I've only been in web design for a little while, but
-                    I knew since the early days of the internet I wanted in on this world - I've always
+                    <p className="p">I've known since the early days of the internet I wanted in on this world - I've always
                     been fascinated with the way people view and interact with the web as well as the
                     creativity and planning that went into making the internet what it is today. It truly is
                     my privelege to be a part of this field and to be able to learn so much
@@ -158,28 +157,29 @@ const About = () => {
                     </div>
 
                     <p className="p"> In my free-time I enjoy playing music on my various instruments –
-                    I play guitar, drums, bass, keyboard among other things. I am also a skier, snowboarder,
-                    golfer, and tennis player when the weather is right. I loved to involve myself in whatever I could –
+                    I play guitar, drums, bass, and keyboard among other things. I am also a skier, snowboarder,
+                    golfer, and tennis player when the weather is right! I love to involve myself in whatever I could –
                     I found that the more communities I exposed myself to and the more skills I got under my belt, the
                     more enriched I became as a person for myself and others. Exploring new places and sharing them with
-                    the people I met along the way broadened my perspective and opened so many doors I never even knew could be opened.
+                    the people I meet along the way have always broadened my perspective and opened so many doors I never
+                     even knew were there.
                 </p>
 
-                    <p className="p">From a young age I always tried to expand my horizons and learn about the world as much as possible.
+                    <p className="p">From a young age, I tried to expand my horizons and learn about the world as much as possible.
                     I became a Jack of All Trades while slowly mastering the ones that I felt were worth it. Many of my endeavors led to
                     failures and shortcomings – I quickly had to adapt to learn how to manage my time and enjoyment so I can best utilize
-                    my time. Often times it wasn't easy - there was a lot of pain and second-guessing along the way. It was hard to let
-                    go of things simply because of the value I saw in it or the outlook it gave me. Being able to give it all up for my
+                    my time. Often times it wasn't easy - there was a lot of pain, regret, and second-guessing along the way. It was hard to let
+                    go of some things because of the value I saw in it or the outlook it could give me. Being able to surrender for my
                 own good is a hard skill to master.</p>
 
 
                     <p className="p">The philosophies I gained from my past have translated well into my development career – I can prioritize what best fits
                     my requirements and push the limits of what I know to propel my projects to places I never dreamed of, while still
-                    constantly looking back and deciding if what I'm doing will work best for me. I still expperience great joy when working on
-                    a project that coming together, or even just starting look like a real page for the first time. The thrill of landing my
+                    constantly looking back and deciding if what I'm doing will work best for me in the long run. I still experience great joy when working on
+                    a project thats finally coming together, or even just starting to look like a real page for the first time. The thrill of landing my
                     first kickflip, floating over that first jump on my new snowboard, nailing that first serve in the match - all of these
-                    feelings directly compare to getting my first react page to work, writing my first for-loop, or getting my flex grid to
-                    finally center. Every day I strive to achieve something a past version of me struggled with or couldn’t quite work out.
+                    feelings directly compare to getting my first component to render, writing a working loop, or getting my flex grid to
+                    finally center my content. Every day I strive to achieve something a past version of me struggled with or couldn’t quite work out.
                     Developing an app is not unlike learning a new trick, or figuring out a new chord progression or even determining the right
                     line on the green - it is a constant battle with yourself and a collaborative effort with others that really make these
                 experiences special. It will be a feeling that I’ll be chasing, in my career or in in my life,</p>
@@ -196,7 +196,6 @@ const About = () => {
                 </section>
 
                 <section className="cd-section cd-section--bg-fixed"></section>
-                <div className="footer">Photo credit to u/612shooter on Reddit.</div>
             </main>
         </>
     )

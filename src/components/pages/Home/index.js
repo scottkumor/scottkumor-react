@@ -34,14 +34,12 @@ const Home = () => {
     return (
 
         <div id="homePage" className="homePage" style={{ backgroundImage: `url(${imageUrl})` }}>
-
             <div className="contentWrap">
                 <ScrollAnimation 
                     className="title" 
-                    animateIn='fadeInDown'
-                    animateOut="fadeOut"
+                    animateIn='fadeInDownBig'
                     animateOnce={true}
-                    duration={3}
+                    duration={4}
                 > 
                     <div className="p1">Scott Kumor</div>
                 </ScrollAnimation>
@@ -49,22 +47,18 @@ const Home = () => {
 
                 <ScrollAnimation 
                     className="p2"
-                    animateIn='fadeInDown'
-                    animateOut='fadeOutDown'
+                    animateIn='fadeInDownBig'
                     animateOnce={true}
-                    duration={5}
+                    duration={3}
 
                 >
                     <Link className="btn"to="/about">About</Link>
                     <Link className="btn"to="/portfolio">Portfolio</Link>
                     <Link className="btn"to="/contact">Contact</Link> 
                 </ScrollAnimation>     
-                
-                <div className="footer"> Photo Credit to Kevin Young</div>
-
             </div>   
         </div>
-
+        
     )
 };
 

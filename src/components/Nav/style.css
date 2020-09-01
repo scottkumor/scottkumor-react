@@ -9,7 +9,7 @@
   top: 0;
   text-transform: capitalize !important;
   padding: 1vh 0;
-
+  z-index:1;
 }
 
 .navMain{
@@ -166,7 +166,7 @@ display: none;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    transform: translateY(100%);
+    transform: translateY(120%);
 
   }
 
