@@ -7,31 +7,81 @@ import Jumper from '../../Jumper'
 import DB from "../../../data/db.json"
 
 export default class Portfolio extends Component {
+    constructor() {
+        super();
+        this.state = {
+            height: window.innerHeight,
+            width: window.innerWidth
+        };
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+    componentDidMount() {
+        console.log(this.state.height);
+        // Additionally I could have just used an arrow function for the binding `this` to the component...
+        window.addEventListener("resize", this.updateDimensions);
+    }
+    updateDimensions() {
+        this.setState({
+            height: window.innerHeight,
+            width: window.innerWidth
+        });
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
     render() {
-        return (
-            <>
-                <Nav />
-                <div className="bg"></div>
-                <div className="bg bg2"></div>
-                <div className="bg bg3"></div>
+        let width = window.innerWidth;
+        if (width > 768) {
+            return (
+                <>
+                    <Nav />
+                    <div className="bg"></div>
+                    <div className="bg bg2"></div>
+                    <div className="bg bg3"></div>
 
-                <div className="portWrap">
+                    <div className="portWrap">
 
-                    {/* <div className="linkWrap">
-                        <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
-                            My Github
-                        </a>
-                    </div> 
-                    */}
+                        <Carousel
+                            showThumbs={false}
+                            infiniteLoop={true}
+                            swipeable={true}
+                            emulateTouch={true}
+                        >
+                            {DB.map(item => (
+                                <Jumper
+                                    id={item.id}
+                                    key={item.id}
+                                    name={item.name}
+                                    image={item.image}
+                                    link={item.link}
+                                    alt={item.alt}
+                                    title={item.title}
+                                    credit={item.credit}
+                                    description={item.description}
+                                    icon={item.icon}
+                                />
+                            ))}
+                        </Carousel>
 
-                    <Carousel
-                        showThumbs={false}
-                        infiniteLoop={true}
-                        swipeable={true}
-                        emulateTouch={true}
-                    >
+                        {/* <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
+                Visit my Github!
+            </a>
+             */}
+                    </div>
 
+                </>
+            )
+        } if (width <= 768) {
+            return (
+                <>
+                    <Nav />
+                    <div className="bg"></div>
+                    <div className="bg bg2"></div>
+                    <div className="bg bg3"></div>
+
+                    <div className="portWrap">
                         {DB.map(item => (
                             <Jumper
                                 id={item.id}
@@ -45,45 +95,11 @@ export default class Portfolio extends Component {
                                 description={item.description}
                                 icon={item.icon}
                             />
-                            
                         ))}
 
-
-                    </Carousel>
-
-                </div>
-            </>
-        )
+                    </div>
+                </>
+            );
+        }
     }
 }
-
-
-
-
-/* <div className=""> Photo by Carolyn V on Unsplash
-<a className="" href="https://scottkumor.github.io/Day-Planner/">
-    <div className="">Day Planner</div>
-    <img alt="" className="" src="./assets/images/soon3.jpg" />
-</a>
-</div>
-
-<div className=""> Photo by John Macdonald on Unsplash
-<a className="" href="https://scottkumor.github.io/Weather-Dashboard/">
-    <div className="">Weather Dashboard</div>
-    <img alt="" className="" src="./assets/images/152-367x267.jpg" />
-</a>
-</div>
-
-<div className="">
-<a className="" href="https://iedson.github.io/spotlight/">
-    <div className="">Spotlight</div>
-    <img alt="" className="" src="./assets/images/spotlight.jpg" />
-</a>
-</div>
-
-<div className="">
-<a className="" href="https://sovest.herokuapp.com/">
-    <div className="">Sovest</div>
-    <img alt="" className="" src="./assets/images/main-logo.png" />
-</a>
-</div> */

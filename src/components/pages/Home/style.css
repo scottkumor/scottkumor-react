@@ -41,12 +41,12 @@
 .p2 {
   font-size: 2.5vw;
   background: linear-gradient(90deg, transparent 0%, #9fc1f5d0
-  20%, #4477c4d0 90%, transparent 100%); 
+  20%, #4477c4d0 95%, transparent 100%); 
   max-width: 60vw;
-  text-align: right;
+  text-align: center;
   padding: 2vh 7vw 2vh 12vh;
-  font-family: 'Inknut Antiqua';
-  display:flex;
+  font-family: 'Fredericka the Great', cursive;
+    display:flex;
   flex-direction:column;
   margin: 4vw;
 
@@ -55,7 +55,7 @@
 
 
 .btn {
-  padding:1vw;
+  padding:2vw;
   text-decoration: none;
   color: white;
   transition: all 0.3s;
