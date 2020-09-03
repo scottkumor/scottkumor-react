@@ -42,7 +42,10 @@ export default class Portfolio extends Component {
                     <div className="bg bg3"></div>
 
                     <div className="portWrap">
-
+                        <div className="disclaimer">
+                            DISCLAIMER: Some projects may no longer be working and/or have ceased to be supported.
+                            They remain in this list to showcase design over functionality.
+                        </div>
                         <Carousel
                             showThumbs={false}
                             infiniteLoop={true}
@@ -65,10 +68,10 @@ export default class Portfolio extends Component {
                             ))}
                         </Carousel>
 
-                        {/* <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
-                Visit my Github!
-            </a>
-             */}
+                        <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
+                            Visit my Github!
+                        </a>
+            
                     </div>
 
                 </>
@@ -82,6 +85,10 @@ export default class Portfolio extends Component {
                     <div className="bg bg3"></div>
 
                     <div className="portWrap">
+                     <div className="disclaimer">
+                            DISCLAIMER: Some projects may no longer be working and/or have ceased to be supported.
+                            They remain in this list to showcase design over functionality.
+                        </div>
                         {DB.map(item => (
                             <Jumper
                                 id={item.id}
@@ -97,7 +104,11 @@ export default class Portfolio extends Component {
                             />
                         ))}
 
+                        <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
+                                Visit my Github!
+                        </a>
                     </div>
+                    
                 </>
             );
         }
