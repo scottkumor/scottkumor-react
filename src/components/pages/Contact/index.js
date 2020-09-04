@@ -1,143 +1,186 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import DB from "../../../data/letters.json";
 import Nav from "./../../Nav";
-import Modal from "./../../Modal/index.js";
+// import Modal from "./../../Modal/index.js";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "./style.css";
 import "./letters.scss";
 import desktopImage from './../../../assets/images/HomeIMG-Brad-Knight-Unsplash.jpg';
-import mobileImage from './../../../assets/images/sunset.jpg';
+import mobileImage from './../../../assets/images/contactMobile.jpg';
 import pdf from "../../../assets/files/ScottKumorResume.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripLinesVertical } from '@fortawesome/free-solid-svg-icons';
 
 
-function Contact() {
-
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const imageUrl = windowWidth > 768 ? desktopImage : mobileImage;
-
-    useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowWidth(window.innerWidth);
+export default class Contact extends Component {
+    constructor() {
+        super();
+        this.state = {
+            height: window.innerHeight,
+            width: window.innerWidth
         };
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+    componentDidMount() {
+        window.addEventListener("resize", this.updateDimensions);
+    }
+    updateDimensions() {
+        this.setState({
+            height: window.innerHeight,
+            width: window.innerWidth
+        });
+    }
 
-        window.addEventListener('resize', handleWindowResize);
+    componentWillUnmount() {
+        window.removeEventListener("resize", this.updateDimensions);
+    }
 
-        return () => {
-            window.removeEventListener('resize', handleWindowResize);
+    render() {
+
+
+        function sendEmail() {
+            window.location = "mailto:scottkumor1212@gmail.com";
         }
-    }, []);
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
-    
-    function sendEmail() {
-        window.location = "mailto:scottkumor1212@gmail.com";
+        function openResume() {
+            window.open(pdf);
+        }
+
+        function copyEmail() {
+            
+            var str = "scott.kumor1212@gmail.com"
+            function listener(e) {
+                e.clipboardData.setData("text/html", str);
+                e.clipboardData.setData("text/plain", str);
+                e.preventDefault();
+            }
+            document.addEventListener("copy", listener);
+            document.execCommand("copy");
+            document.removeEventListener("copy", listener);
+        
     }
 
-    function openResume() {
-        window.open(pdf);
-    }
-
-    return (
-        <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${imageUrl})` }}>
-
-            <ScrollAnimation
-                className="wrapper"
-                animateIn='fadeInDown'
-                animateOut="fadeOut"
-                animateOnce={true}
-                duration={15}
-            >
-                <div id="letters" className="letters">
-                    {DB.map(letter => (
-                        <span key={letter.id} className="letter">{letter.char}</span>
-                    ))}
-                </div>
-            </ScrollAnimation>
-
-            <div className="contactContent">
+        let width = window.innerWidth;
 
 
-                <ScrollAnimation
-                    id="copy"
-                    className="pBlock"
-                    animateIn='fadeInLeft'
-                    animateOnce={true}
-                    duration={5}
-                >
-                    <div>Click <div className="upper">email me </div> to message me using your device's 
-                    default mail app. <div className="upper"> copy email </div> copies my email address.
-                    </div>
+        if (width > 768) {
+            return (
 
+                <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${desktopImage})` }}>
+                    <div>
+                        <ScrollAnimation
+                            className="wrapper"
+                            animateIn='fadeInDown'
+                            animateOnce={true}
+                            duration={10}
+                        >
+                            <div id="letters" className="letters">
+                                {DB.map(letter => (
+                                    <span key={letter.id} className="letter">{letter.char}</span>
+                                ))}
+                            </div>
+                        </ScrollAnimation>
 
-                </ScrollAnimation>
+                        <ScrollAnimation
+                            className="btnFlex"
+                            animateIn="fadeInDown"
+                            delay={4000}
 
-                <ScrollAnimation
-                    id="resume"
-                    className="pBlock"
-                    animateIn='fadeInRight'
-                    animateOnce={true}
-                    duration={5}
-                >
-                    <div>click <div className="upper"> resume pdf </div> to generate PDF of my
-                    resume in a new tab. click <div className="upper"> download pdf </div> to save it to your device.
-                    </div>
+                        >
+                            <div className="btnsWrap">
 
-                </ScrollAnimation>
-            </div>
-
-
-            <ScrollAnimation
-                className="btnFlex"
-                animateIn="fadeInDown"
-                delay={4000}
-
-            >
-                <div className="btnsWrap">
-
-                    <button
-                        onClick={sendEmail}
-                        className="contactBtn"
-                    >
-                        Email Me
+                                <button
+                                    onClick={sendEmail}
+                                    className="contactBtn"
+                                >
+                                    Email Me
                     </button>
 
-                    <Modal />
+                                <button onClick={copyEmail} className="contactBtn">
+                                    Copy Email
+                            </button>
+                                {/* <Modal /> */}
 
-                    <FontAwesomeIcon
-                        icon={faGripLinesVertical}
-                        size="4x"
-                        style={{ padding: "1vw" }}
-                    />
+                                <FontAwesomeIcon
+                                    icon={faGripLinesVertical}
+                                    size="4x"
+                                    style={{ padding: "1vw" }}
+                                />
 
-                    <button
-                        id="pdfBtn"
-                        onClick={openResume}
-                        className="contactBtn"
-                    >
-                        Open PDF
+                                <button
+                                    id="pdfBtn"
+                                    onClick={openResume}
+                                    className="contactBtn"
+                                >
+                                    Open PDF
                         </button>
 
-                    <a
-                        id="dlBtn"
-                        className="contactBtn"
-                        download href={pdf}
-                    >
-                        Download PDF
+                                <a
+                                    id="dlBtn"
+                                    className="contactBtn"
+                                    download href={pdf}
+                                >
+                                    Download PDF
                         </a>
+                            </div>
+
+
+                        </ScrollAnimation>
+                    </div>
+                    <Nav />
                 </div>
-                
+            )
+        } if (width <= 768) {
+            return (
+                <div id="contactPage" className="contactPage" style={{ backgroundImage: `url(${mobileImage})` }}>
+                    <Nav />
 
-            </ScrollAnimation>
+                    <ScrollAnimation
+                        className="btnFlex"
+                        animateIn="fadeIn"
+                        delay={0}
+                    >
+                        <div className="btnsWrap">
 
-            <Nav />
-        </div>
-    )
+                            <ScrollAnimation
+                                className="greeting"
+                                animateIn="fadeInDown"
+                                delay={2}
+                                duration={10}
+                            >
+                                Contact Me
+                            </ScrollAnimation>
+
+                            <button onClick={sendEmail} className="send">
+                                Email Me
+                            </button>
+
+                            <button onClick={copyEmail} className="copy">
+                                Copy Email
+                            </button>
+
+                            {/* <Modal /> */}
+
+                            
+
+                            <button id="pdfBtn" onClick={openResume} className="pdf">
+                                Open Resume
+                            </button>
+
+                            <a
+                                id="dlBtn"
+                                className="download"
+                                download href={pdf}
+                            >
+                                Download Resume
+                            </a>
+                        </div>
+
+
+                    </ScrollAnimation>
+                </div >
+
+            )
+        }
+    }
 }
-
-export default Contact;
-
-

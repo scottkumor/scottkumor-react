@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import FadeIn from "react-fade-in"
+//import FadeIn from "react-fade-in"
 import "./style.css";
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
-import desktopImage from './../../../assets/images/contact.jpg';
+import desktopImage from './../../../assets/images/home-kevin-young.jpg'
 import mobileImage from './../../../assets/images/contact.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 
 const Home = () => {
@@ -34,63 +34,31 @@ const Home = () => {
     return (
 
         <div id="homePage" className="homePage" style={{ backgroundImage: `url(${imageUrl})` }}>
-
             <div className="contentWrap">
                 <ScrollAnimation 
-                    className="p1" 
-                    animateIn='fadeInDown'
-                    animateOut="fadeOut"
+                    className="title" 
+                    animateIn='fadeInDownBig'
+                    animateOnce={true}
+                    duration={4}
+                > 
+                    <div className="p1">Scott Kumor</div>
+                </ScrollAnimation>
+
+
+                <ScrollAnimation 
+                    className="p2"
+                    animateIn='fadeInDownBig'
                     animateOnce={true}
                     duration={3}
-                > 
-                    Scott Kumor
-                </ScrollAnimation>
 
-                <FadeIn
-                    delay={5000}
-                >
-                    <ScrollAnimation 
-                        delay={4500}
-                        animateIn="bounce"
-                        duration={3}
-                        animateOnce={true}
-                    >
-                        <FontAwesomeIcon
-                            icon={faArrowDown} 
-                            size="5x"
-                        />
-                    </ScrollAnimation>
-                </FadeIn>
-
-                <ScrollAnimation className="p2"
-                    animateIn='fadeInUp'
-                    animateOut='fadeOutUp'
-                    initiallyVisible={false}
-                    animateOnce={true}
-                    duration={2}
-                    offset={300}
-                >
-                        <div className="inside">Welcome to my personal website. The buttons in the navigation bar below will take you to various parts of the site -
-                        'About' will direct you to my background information. 'Portfolio' will let you view
-                        all my past and current projects. 'Contact' will lead you to the
-                        the best ways to reach out to me should you want to, as well as the option to generate a PDF of my Résumé.
-                        </div> 
-                </ScrollAnimation>
-                
-                <ScrollAnimation 
-                    className="btnWrap"
-                    animateIn='fadeInDown'
-                    animateOut='fadeOutDown'
-                    animateOnce={true}
                 >
                     <Link className="btn"to="/about">About</Link>
                     <Link className="btn"to="/portfolio">Portfolio</Link>
                     <Link className="btn"to="/contact">Contact</Link> 
-                </ScrollAnimation>
-
+                </ScrollAnimation>     
             </div>   
         </div>
-
+        
     )
 };
 

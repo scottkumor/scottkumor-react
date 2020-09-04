@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 .modal {
     opacity: 1;
@@ -15,7 +14,7 @@
      z-index: 99999;
      transition: opacity 1s ease-in-out 0s;
      pointer-events: auto;
-     overflow-y: hidden;
+     overflow-y: show;
     height:100%
     
 

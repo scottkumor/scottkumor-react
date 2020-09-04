@@ -39,7 +39,7 @@ export default class ContactModal extends React.Component {
 
         return (
             <div className="modalWrap" onClick={copyEmail}>
-                <button className="contactBtn" onClick={this.show.bind(this)}>Copy Email</button>
+                <button className="copy" onClick={this.show.bind(this)}>Copy Email</button>
                 <Modal
                     className="modal" //this will completely overwrite the default css completely
                     // style={{}} //overwrites the default background
