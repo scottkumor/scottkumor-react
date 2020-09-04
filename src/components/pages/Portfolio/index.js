@@ -16,8 +16,6 @@ export default class Portfolio extends Component {
         this.updateDimensions = this.updateDimensions.bind(this);
     }
     componentDidMount() {
-        console.log(this.state.height);
-        // Additionally I could have just used an arrow function for the binding `this` to the component...
         window.addEventListener("resize", this.updateDimensions);
     }
     updateDimensions() {

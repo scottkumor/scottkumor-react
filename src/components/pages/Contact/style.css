@@ -4,41 +4,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    overflow-y:hidden;
+	overflow-y:hidden;
+	overflow-x:hidden;
 	font-family: 'Major Mono Display';
 	text-transform: lowercase;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	
 }
-
-.contactContent{
-	margin: 5vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: x-large;
-	margin: 2vh;
-}
-
-.pBlock{
-	max-width: 30vw;
-	height: 100%;
-	margin: 3vh;	
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
-
-.upper {
-	text-transform: uppercase;
-	font-weight: bolder;
-	display: inline-block;
-}
-
 
 #copyBtn {
 	display: none;
@@ -58,7 +33,6 @@
 	justify-content: center;
 	align-items: center;
 	padding: 2vw;
-	background: linear-gradient(90deg, transparent 0%, rgba(255,255,255, .8) 5%, rgba(255,255,255, .8) 95%, transparent 100%); 
 
 }
 
@@ -84,6 +58,8 @@
 	background-color: transparent;
 	border: none;
 	cursor:pointer;
+	font-size: 1.5vh;
+
   }
   
   
@@ -132,3 +108,54 @@
 
 
   /* scrolling letters styles in scss file */
+
+  @media (max-width: 768px) {
+
+	.greeting {
+		color:white;
+		font-size: 6vh;
+		white-space:nowrap;
+		padding: 1vh;
+		font-weight:bolder;
+		text-transform: uppercase;
+	}
+	
+	.btnsWrap {
+		flex-direction: column;
+		padding: 1vh;
+		align-items: center;
+		font-weight: bold;
+		margin:1vh;
+		max-width:100%
+	}
+
+	.btnFlex {
+		max-width: 90vw;
+		max-height: 90vh;
+		background:linear-gradient( to bottom, transparent 0%, rgba(163, 142, 139, 0.7)100%);
+		border-radius: 25px
+	}
+
+	.pdf, .copy, .send, .download{
+		font-family: 'Major Mono Display';
+		text-transform: lowercase;
+		border:none;
+		outline:none;
+		background: rgba(179,138,132, 0.5);
+		font-size: 4vh;
+		text-decoration:none;
+		text-align:center;
+		color: white;
+		font-weight: 900;
+		margin: 2vh;
+		border-top-width: 3px;
+		border-bottom-width: 3px;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		border-top-color: rgba(255,255,255,0.5);
+		border-bottom-color: rgba(255,255,255,0.5);
+		padding: 1.5vh;
+		border-radius: 10px
+	};
+
+  }

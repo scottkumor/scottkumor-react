@@ -28,7 +28,7 @@
   font-size: 12vw;
   font-weight: bold;
   color: transparent;
-  background: #4477c4d0;
+  background: #266cd4d0;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -40,11 +40,11 @@
 
 .p2 {
   font-size: 2.5vw;
-  background: linear-gradient(90deg, transparent 0%, #9fc1f5d0
-  20%, #4477c4d0 95%, transparent 100%); 
+  /* background: linear-gradient(90deg, transparent 0%, hsla(216, 81%, 79%, 0.816)
+  20%, #4477c4d0 95%, transparent 100%);  */
   max-width: 60vw;
   text-align: center;
-  padding: 2vh 7vw 2vh 12vh;
+  padding: 2vh 3vh 2vh 12vh;
   font-family: 'Inknut Antiqua';
     display:flex;
   flex-direction:column;
@@ -55,11 +55,12 @@
 
 
 .btn {
-  padding:2vw;
+  padding:1vh;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   transition: all 0.3s;
   position: relative;
+  margin: 2vh;
 }
 
 

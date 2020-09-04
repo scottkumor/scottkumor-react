@@ -2,67 +2,37 @@
     {
         "id": 1,
         "name": "Password Generator",
-        "image": "/images/jason-dent-3wPJxh-piRw-unsplash.jpg",
         "link": "https://scottkumor.github.io/Password-Generator/",
         "alt": "Password Generator",
         "title": "Password Generator",
-        "credit": "Photo by Jason Dent on Unsplash",
         "description": "A lightweight random character generator for use when you need a new password.",
         "icon":"key"
     },
     {
         "id": 2,
         "name": "Day Planner",
-        "image": "/images/carolyn-v-3ZvHsFiZyME-unsplash.jpg",
         "link": "https://scottkumor.github.io/Day-Planner/",
         "alt": "Day Planner",
         "title": "Day Planner",
-        "credit": "Photo by Carolyn V on Unsplash",
         "description": "A useful tool to help you plan your day.",
         "icon":"list-alt"
     },
     {
         "id": 3,
         "name": "Weather Dashboard",
-        "image": "/images/john-macdonald-k8037LJCGQw-unsplash.jpg",
         "link": "https://scottkumor.github.io/Weather-Dashboard/",
         "alt": "Weather Dashboard",
         "title": "Weather Dashboard",
-        "credit": "Photo by John Macdonald on Unsplash",
         "description": "Find out the weather by typing in your city.",
         "icon":"cloud-sun-rain"
     },
     {
         "id": 4,
-        "name": "Spotlight",
-        "image": "/images/spotlight.jpg",
-        "link": "https://iedson.github.io/spotlight/",
-        "alt": "Spotlight",
-        "title": "Spotlight",
-        "credit": "Image by Izzy Edson",
-        "description": "Collaboration: Spotlight is a Streaming Service Search Engine. Find out here where you can stream your favorite shows.",
-        "icon":"search"
-    },
-    {
-        "id": 5,
-        "name": "Sovest",
-        "image": "/images/main-logo.png",
-        "link": "https://sovest.herokuapp.com/",
-        "alt": "Sovest",
-        "title": "Sovest",
-        "credit": "Image by Izzy Edson",
-        "description": "Collaboration: A women-focused investment tool focusing on Instagram Influencers and their effect on the market.",
-        "icon":"chart-area"
-    },
-    {
-        "id": 6,
         "name": "uCTAnon",
-        "image": "/images/logoSmall.png",
         "link": "http://uctanon.herokuapp.com/",
         "alt": "uCTAnon",
         "title": "uCTAnon",
-        "credit": "Image by Scott Kumor",
-        "description": "Collaboration: An anonymous, user-controlled social media experience designed to help users navigate the wild west of Chicago's public rail system.",
+        "description": "Collaboration: Stay informed on the wild west that is Chicago's public rail system.",
         "icon":"subway"
     }
 ]
