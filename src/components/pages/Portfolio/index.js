@@ -5,6 +5,7 @@ import "./style.css"
 import Nav from "./../../Nav"
 import Jumper from '../../Jumper'
 import DB from "../../../data/db.json"
+import Portal from "../../../assets/images/portal-benjamin-suter.jpg"
 
 export default class Portfolio extends Component {
     constructor() {
@@ -105,6 +106,9 @@ export default class Portfolio extends Component {
                         <a className="gitLink" href="https://github.com/scottkumor" rel="noopener noreferrer" target="_blank">
                                 Visit my Github!
                         </a>
+
+                        <img title="portal" alt="Image" class="portal" src={Portal} />
+
                     </div>
                     
                 </>
