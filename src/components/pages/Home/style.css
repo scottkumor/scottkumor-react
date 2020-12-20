@@ -33,7 +33,7 @@
   -moz-background-clip: text;
   background-clip: text;
   text-shadow: 1px 4px 4px rgba(255,255,255,0.5);
-  font-family: 'Inknut Antiqua';
+  font-family: 'Poppins';
 
 
 }
@@ -45,7 +45,7 @@
   max-width: 60vw;
   text-align: center;
   padding: 2vh 3vh 2vh 12vh;
-  font-family: 'Inknut Antiqua';
+  font-family: 'Poppins';
     display:flex;
   flex-direction:column;
   margin: 4vw;

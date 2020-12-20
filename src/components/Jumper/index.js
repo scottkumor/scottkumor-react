@@ -15,15 +15,16 @@ function Jumper(props) {
 
 
     return (
-        <a className="linkWrap" href={props.link} target="_blank">
-            <FontAwesomeIcon className="svg" size="9x" icon={props.icon}></FontAwesomeIcon>
-
-            <div className="infoWrap">
-                <div className="legend">{props.name}</div>
-
-                <div className="infoCard">{props.description}</div>
+        <div className="infoWrap">
+            <div className="infoCard">
+                <FontAwesomeIcon className="svg" size="7x" icon={props.icon}></FontAwesomeIcon>
+                
+                <div className="infoDesc">{props.description}</div>
             </div>
-        </a>
+            <a className="linkWrap" href={props.link} target="_blank">
+            {props.name}
+            </a>
+        </div>
     )
 };
 
