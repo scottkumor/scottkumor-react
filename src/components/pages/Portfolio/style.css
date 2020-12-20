@@ -23,38 +23,6 @@
    box-shadow:          0 0 50px #000;
 }
 
-.gitLink{
-  text-decoration: none;
-  outline: none;
-  color:white;
-  font-family: 'Jost', sans-serif !important;
-  cursor:pointer;
-  margin:2vw;
-}
-
-.linkWrap{
-  display:flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    text-decoration:none;
-    padding: 10vw;
-
-}
-
-.infoCard {
-  color: white;
-  background-color: black;
-  overflow:hidden;
-  text-align:center;
-  padding:2%;
-  max-width: 80%;
-}
-
-.infoWrap{
-  display:flex;
-}
-
 .svg{
   color:white;
   background-color: black;
@@ -65,56 +33,82 @@
    box-shadow:          0 0 10px #ffffff;
 }
 
+.infoDesc {
+  color: white;
+  background-color: black;
+  overflow:hidden;
+  text-align:center;
+  padding:2%;
+  max-width: 50%;
+  
+}
+
 .linkWrap{
-  display:flex;
+    display:flex;
     justify-content: center;
     align-items: center;
-    cursor:pointer;
-    height: 50vh;
-    padding: 0 15vw;
-    margin-bottom: 5vh;
-
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    cursor:pointer; 
+    padding: 1vh 15vw;
+    margin: 3vh;
+    background-color: black;
+    text-align:center;
+    -moz-box-shadow:     0 0 10px #ffffff;
+     -webkit-box-shadow:  0 0 10px #ffffff;
+     box-shadow:          0 0 10px #ffffff;
 }
 
-.legend {
-  text-align:center;
-  -moz-box-shadow:     0 0 10px #ffffff;
-   -webkit-box-shadow:  0 0 10px #ffffff;
-   box-shadow:          0 0 10px #ffffff;
-
-}
-
-.carousel .slide .legend {
-width: 75%;
-margin: 2vh;
-left: 10%;
-right:0;
-bottom:0;
-margin-bottom: 5vh;
-
+.linkWrap:hover {
+  color: black;
+  background-color: rgba(0,0,0,0.5);
 }
 
 .infoWrap {
   text-align:center;
   display:flex;
+  flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding: 2vw;
 }
 
 .infoCard {
+  display:flex;
+    justify-content: space-around;
+    align-items: center;
   color: white;
   background-color: black;
   overflow:hidden;
   text-align:center;
-  padding:2vh;
+  padding: 6vh;
+  margin: 0 3vw;
   font-size: 3vh;
   -moz-box-shadow:     0 0 10px #ffffff;
    -webkit-box-shadow:  0 0 10px #ffffff;
    box-shadow:          0 0 10px #ffffff;
 }
 
-/* ----------------------------------- */
+.gitLink{
+  text-decoration: none;
+  outline: none;
+  color:white;
+  font-family: 'Jost', sans-serif !important;
+  cursor:pointer;
+  margin:2vw;
+}
+/* ---------------- carousel tweaks */
 
+.carousel .slide .legend {
+  width: 75%;
+  margin: 2vh;
+  left: 10%;
+  right:0;
+  bottom:0;
+  margin-bottom: 5vh;
+  
+  }
 .carousel-root {
   -moz-box-shadow:     0 0 10px #000;
    -webkit-box-shadow:  0 0 10px #000;
@@ -127,7 +121,7 @@ padding: 2vh;
 .carousel .carousel-status {
   position: relative;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1vw;
   text-shadow: 1px 1px 1px rgba(transparent, 0.9);
   color: #fff;
 }
