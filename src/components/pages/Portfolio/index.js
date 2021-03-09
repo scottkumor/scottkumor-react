@@ -18,6 +18,7 @@ export default class Portfolio extends Component {
     }
     componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
+        window.scrollTo(0, 0);
     }
     updateDimensions() {
         this.setState({
@@ -63,6 +64,7 @@ export default class Portfolio extends Component {
                                     credit={item.credit}
                                     description={item.description}
                                     icon={item.icon}
+                                    size="7x"
                                 />
                             ))}
                         </Carousel>
@@ -78,10 +80,7 @@ export default class Portfolio extends Component {
         } if (width <= 768) {
             return (
                 <>
-                    <Nav />
-                    <div className="bg"></div>
-                    <div className="bg bg2"></div>
-                    <div className="bg bg3"></div>
+                    <Nav />         
 
                     <div className="portWrap">
                      <div className="disclaimer">
@@ -100,6 +99,7 @@ export default class Portfolio extends Component {
                                 credit={item.credit}
                                 description={item.description}
                                 icon={item.icon}
+                                size="4x"
                             />
                         ))}
 
@@ -107,7 +107,7 @@ export default class Portfolio extends Component {
                                 Visit my Github!
                         </a>
 
-                        <img title="portal" alt="Image" class="portal" src={Portal} />
+                        <img title="portal" alt="" className="portal" src={Portal} />
 
                     </div>
                     

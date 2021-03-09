@@ -47,7 +47,7 @@
   position: relative;
   padding: 2vh;
   text-decoration: none;
-  color:unset;
+  color: rgb(179,221,242);
 
 }
 .navLink span {
@@ -96,11 +96,6 @@
   transform: scale(0.1, 1);
   
 }
-.navLink:visited{
-  color: rgb(179,221,242);
-}
-
-
 
 .logoIcon, .logoIcon2 {
 display: block;

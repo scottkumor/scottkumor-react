@@ -17,7 +17,7 @@ function Jumper(props) {
     return (
         <div className="infoWrap">
             <div className="infoCard">
-                <FontAwesomeIcon className="svg" size="7x" icon={props.icon}></FontAwesomeIcon>
+                <FontAwesomeIcon className="svg" size={props.size} icon={props.icon}></FontAwesomeIcon>
                 
                 <div className="infoDesc">{props.description}</div>
             </div>
