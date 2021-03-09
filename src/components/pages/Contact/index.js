@@ -23,6 +23,7 @@ export default class Contact extends Component {
     }
     componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
+        window.scrollTo(0, 0)
     }
     updateDimensions() {
         this.setState({
