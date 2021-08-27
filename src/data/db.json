@@ -34,5 +34,15 @@
         "title": "uCTAnon",
         "description": "Collaboration: Stay informed on the wild west that is Chicago's public rail system.",
         "icon":"subway"
+    },
+    {
+        "id": 5,
+        "name": "Intricate System Solutions",
+        "link": "https://intricatess.com/",
+        "alt": "Intricate System Solutions",
+        "title": "Intricate System Solutions",
+        "description": "A quick scaffold for a new company requested by a friend.",
+        "icon":"id-badge"
     }
 ]
+    
